@@ -1,5 +1,8 @@
 package com.cmd.concept;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -67,7 +70,7 @@ public class CMDConceptApp {
 		case 2:
 			System.out.println("List of files in folders");
 			System.out.println("Choose a list:");
-			System.out.println("1.List for file selection\n2.Execute files");
+			System.out.println("1.List for file selection\n2.Execute files\n3. Copy files");
 			key=scanner.nextInt();
 			switch (key) {
 			case 1:
@@ -78,6 +81,10 @@ public class CMDConceptApp {
 			    System.out.println("Opening file...");	
 				break;
 			
+			case 3:
+				System.out.println("Files is being copied...");
+			
+				break;
 
 			default:
 				break;
