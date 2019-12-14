@@ -10,7 +10,10 @@ import java.util.Scanner;
 public class CMDConceptApp {
 
 	public static void main(String[] args) {
-		  // list of files
+		/* 
+		 * 
+		 *   napraviti novi izbornik
+		 *   // list of files
 		  List<String> files=new ArrayList<String>();
 		  // list of files to copy
 		  List<String> copyFiles=new ArrayList<String>();
@@ -99,7 +102,7 @@ public class CMDConceptApp {
 			break;
 		}
 	      
-
+*/
 	}
 
 }
