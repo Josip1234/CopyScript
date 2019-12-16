@@ -5,11 +5,93 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class CMDConceptApp {
 
 	public static void main(String[] args) {
+		//simulated list of file in one directory
+		List<String> files=new ArrayList<String>();
+		files.add("test1.txt");
+		files.add("test2.mp4");
+		files.add("test3.jpg");
+		files.add("test4.docx");
+		files.add("test5.3db");
+		files.add("test6.pdf");
+		files.add("test7.xmls");
+		
+		//choose your directory
+		System.out.println("Choose your directory:");
+		Scanner scanner=new Scanner(System.in);
+		String directory=scanner.nextLine();
+		
+		//print directory
+		System.out.println("You have chosen this directory:"+ directory);
+		
+		//print list of files in this directory
+		System.out.println("Here is a list of files in this directory:");
+	    
+		for (String string : files) {
+			System.out.println(string+"\n");
+		}
+		
+		//choose file from directory to copy
+		System.out.println("Chose file which you want to copy:");
+		String fileToCopy=scanner.nextLine();
+		//initialize message string
+		String message="";
+		//get file from list and return message if there is no such a file in the list
+		String getFileFromList="";
+		for (String string : files) {
+			if(fileToCopy.equals(string)) {
+				getFileFromList=string;
+				break;
+				
+			}else
+			{
+				message="There is no such a file in this directory.";
+			}
+		}
+		
+		//if file from the list is equal inputed file to copy print chosen file else print message and terminate app
+		if(getFileFromList.equals(fileToCopy)) {
+			System.out.println("You have chosen this file: "+getFileFromList);
+		}else {
+			System.out.println("Message:"+ message);
+			System.exit(0);
+			
+		}
+		//make path with file and print it
+		String path=directory+"\\"+getFileFromList;
+		System.out.println("Full path of the file is:\n"+path);
+		
+		//choose destination directory
+		System.out.println("Choose directory for file to move:");
+		String moveDirectory=scanner.nextLine();
+		
+		//print destination directory
+		System.out.println("You have chosen this directory:\n"+moveDirectory);
+		
+		//after submit event is clicked, this is simulation.
+		System.out.println("Clicked ok.");
+		
+		
+		//simulation file move
+		//generate random number up to 10000
+		Random random=new Random();
+		int time=random.nextInt(10000);
+		
+		//simulate by iterating by time pseudorandom generator
+		for (int i = 0; i < time; i++) {
+			
+			System.out.println("Moving file...");
+			
+		}
+		//after move is finished print message
+		message="File has been moved.";
+		System.out.println(message);
+		
 		/* 
 		 * 
 		 *   napraviti novi izbornik

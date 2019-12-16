@@ -21,12 +21,12 @@ import javafx.stage.Stage;
 
 Video: FLV containing VP6 video and MP3 audio; MPEG-4 multimedia container with H.264/AVC (Advanced Video Coding) video compression
  */
-public class Main extends Application {
+public class Main /*extends Application*/ {
 
   public static void main(String[] args) {
-    launch(args);
+   // launch(args);
   }
-  
+  /*
   @Override
   public void start(Stage primaryStage) {
     String workingDir = System.getProperty("user.dir");
@@ -58,5 +58,5 @@ public class Main extends Application {
     
     mp.play();
     
-  }
+  }*/
 }
