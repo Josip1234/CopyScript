@@ -1,6 +1,12 @@
 package com.cmd.merge.cmd.concept;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
 public class MergeMove {
@@ -13,6 +19,8 @@ public class MergeMove {
 		final String noneMessage="none";
 		final String equalDirectories="Destination directory is equal to source directory. Please choose different source or destination directory.";
 		final String emptySourceDir="There is no files in source directory please choose non empty directory.";
+		final String sameFileName="There is already the same file name in this folder.";
+		String file="";
 		//choose source directory
 		System.out.println("Choose source directory:");
 		@SuppressWarnings("resource")
@@ -44,7 +52,7 @@ public class MergeMove {
 	    	 //choose file from source directory which you want to copy
 		    System.out.println("Choose file from source directory:\n");
 		    String fileToMove=scanner.nextLine();
-		    
+		    file=fileToMove;
 		    //print chosen file from source directory
 		    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);
 	    	
@@ -72,19 +80,82 @@ public class MergeMove {
 	    
 	    //print chosen destination directory
 	    //print list of files of destination directory
+	    //check if file name is equal to file which we want to copy
 	    System.out.println("Chosen destination directory:\n"+destinationDirectory);
 	    String[] filesInDestinationDirectory;
 	    File filesinDestination=new File(destinationDirectory);
 	    filesInDestinationDirectory=filesinDestination.list();
 	    System.out.println("List of files in destination directory:\n");
 	    
-	    if(filesInDestinationDirectory.length>0) {
+	    String fileInDirectory="";
+	    
 	    for (String string : filesInDestinationDirectory) {
-			System.out.println(string+"\n");
+			//System.out.println(string+"\n");
+	    	if(string.equals(file)) {
+				fileInDirectory=string;
+				break;
+			}
+			
 		}
-	}else {
-		System.out.println(noneMessage);
-	}
+	    
+	    
+	  //if there is already file in the same name in destination folder 
+	  		//do not create new file do not delete from source directory
+	  		if(fileInDirectory.equals(file)) {
+	  			System.out.println(sameFileName);
+	  			System.exit(0);
+	  		}else {
+	  			
+	  			
+	  		//create file under the name from file which we want to copy in destination folder
+	  			//if failed exit the program with failed message
+	  			//else print successfully message
+	  			//output needs to be closed because it will not copy file content because other process will be used.
+	  			try {
+	  				FileOutputStream output=new FileOutputStream(destinationDirectory+"/"+file);
+	  				output.close();
+	  			} catch (IOException e) {
+	  				System.out.println("File creation failed.");
+	  				e.printStackTrace();
+	  				System.exit(0);
+	  			}
+	  			System.out.println("File successfully created.");
+	  			
+	  			
+				
+	  			//get file name from source directory and the directory and put it into path string
+	  			//if succesfully moved return successfuly message if not exit the program with message fail
+	  			String path=sourceDirectory+"/"+file;
+	  			String destination=destinationDirectory+"/"+file;
+	  			
+	  			try {
+	  				Path temp=Files.move(Paths.get(path), Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
+	  				 if(temp != null) 
+	  			        { 
+	  			            System.out.println("File renamed and moved successfully"); 
+	  			        } 
+	  			        else
+	  			        { 
+	  			            System.out.println("Failed to move the file"); 
+	  			        } 
+	  			} catch (IOException e) {
+	  				System.out.println("Failed file move");
+	  				
+	  				e.printStackTrace();
+	  				System.exit(0);
+	  			}
+	  			System.out.println("File successfuly moved.");
+	  			
+	  			
+	  			
+	  			
+	  			
+	  		}
+	    
+	    
+	    
+	    
+	
 	    };
 }
 }
