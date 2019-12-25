@@ -12,6 +12,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class ThreeClassMerge {
 
 	public static void main(String[] args) {
+		
+		final String noneMessage="none";//in class message
+		final String equalDirectories="Destination directory is equal to source directory. Please choose different source or destination directory.";//in class message
+		final String emptySourceDir="There is no files in source directory please choose non empty directory.";//in class message
+		final String sameFileName="There is already the same file name in this folder.";//in class message
+		String file="";
+		
+		
 		String sourceDirectory="";
 		String destinationDirectory="";
 		boolean open=false;
@@ -41,7 +49,19 @@ public class ThreeClassMerge {
 			}
 			 System.exit(0);
 		 }else {
+			 
 			 System.out.println("Enter source and destination directory, etc...");
+			 
+				//choose source directory
+				System.out.println("Choose source directory:");
+				sourceDirectory=scanner.nextLine();
+				
+				//print chosen directory
+				System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message
+			 
+			 
+			 
+			 
 			 System.exit(0);
 		 }
 
