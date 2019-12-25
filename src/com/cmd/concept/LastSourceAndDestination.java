@@ -17,38 +17,38 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class LastSourceAndDestination {
 	 public static void main(String[] args) {
-		 String sourceDirectory="sourceDirectory";
-		 String destinationDirectory="destinationDirectory";
-		 boolean open=false;
-		 Scanner scanner=new Scanner(System.in);
+		 String sourceDirectory="sourceDirectory"; //in merge three classes
+		 String destinationDirectory="destinationDirectory";//in merge three classes
+		 boolean open=false;//in merge three classes
+		 Scanner scanner=new Scanner(System.in);//in merge three classes
 		 //here app will ask user to open external file
-		 System.out.println("Open last saved source and destination directory? true for yes false for no");
+		 System.out.println("Open last saved source and destination directory? true for yes false for no");//in merge three classes
 		 //boolean input if user opens then file will be parsed else make json objects from chosen directory
-		 open=scanner.nextBoolean();
-		 scanner.nextLine();
-		 if(open==true) {
-			 System.out.println("Choose file which contains last saved source and destination directory:");
-			 String lastFile=scanner.nextLine();
-			 System.out.println("Reading json source files and parsing it to the variable...");
-			 ObjectMapper map=new ObjectMapper();
-			 try {
-				SourceDestination sd=map.readValue(new File(lastFile), SourceDestination.class);
-				System.out.println(sd.getSourceDirectory()+"\n"+sd.getDestinationDirectory());
-			} catch (JsonParseException e) {
+		 open=scanner.nextBoolean();//in merge three classes
+		 scanner.nextLine();//in merge three classes
+		 if(open==true) {//in merge three classes
+			 System.out.println("Choose file which contains last saved source and destination directory:");//in merge three classes
+			 String lastFile=scanner.nextLine();//in merge three classes
+			 System.out.println("Reading json source files and parsing it to the variable...");//in merge three classes
+			 ObjectMapper map=new ObjectMapper();//in merge three classes
+			 try {//in merge three classes
+				SourceDestination sd=map.readValue(new File(lastFile), SourceDestination.class);//in merge three classes
+				System.out.println(sd.getSourceDirectory()+"\n"+sd.getDestinationDirectory());//in merge three classes
+			} catch (JsonParseException e) {//in merge three classes
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (JsonMappingException e) {
+				e.printStackTrace();//in merge three classes
+			} catch (JsonMappingException e) {//in merge three classes
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
+				e.printStackTrace();//in merge three classes
+			} catch (IOException e) {//in merge three classes
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			 System.exit(0);
-		 }else {
-			 System.out.println("Enter source and destination directory, etc...");
-			 System.exit(0);
-		 }
+				e.printStackTrace();//in merge three classes
+			}//in merge three classes
+			 System.exit(0);//in merge three classes
+		 }else {//in merge three classes
+			 System.out.println("Enter source and destination directory, etc...");//in merge three classes
+			 System.exit(0);//in merge three classes
+		 }//in merge three classes
 		
 		 
 		 //save last saved source and destination directory to json file located from user choice

@@ -1,4 +1,4 @@
-package com.cmd.merge.cmd.concept;
+package com.cmd.merge.cmd;
 
 import java.io.File;
 import java.io.FileOutputStream;
