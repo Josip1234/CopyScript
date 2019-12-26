@@ -1,13 +1,23 @@
 package com.cmd.merge.cmd;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
 import com.cmd.concept.SourceDestination;
+import com.fasterxml.jackson.core.JsonEncoding;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class ThreeClassMerge {
 
@@ -58,6 +68,141 @@ public class ThreeClassMerge {
 				
 				//print chosen directory
 				System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message
+				
+				
+				String[] filesInSourceDirectory;
+				File filesInSource=new File(sourceDirectory);
+				filesInSourceDirectory=filesInSource.list();
+				
+			    System.out.println("List of files in source directory:\n");//in class message
+			    if(filesInSourceDirectory.length>0) {
+			    	for (String string : filesInSourceDirectory) {
+						System.out.println(string+"\n");
+					}
+			    	
+			    	 //choose file from source directory which you want to copy
+				    System.out.println("Choose file from source directory:\n");//in class message
+				    String fileToMove=scanner.nextLine();
+				    file=fileToMove;
+				    //print chosen file from source directory
+				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message
+			    	
+			    	
+			    }else {
+			    	System.out.println(noneMessage);
+			    	System.out.println(emptySourceDir);
+			    	System.exit(0);
+			    }
+			    
+				
+				//choose destination directory
+			    System.out.println("Choose destination directory:");//in class message
+			    destinationDirectory=scanner.nextLine();
+			    
+			    //after destination directory is chosen this check if 
+			    //destination directory is equal to source directory if it is then 
+			    //app is terminated with message
+			    if(destinationDirectory.equals(sourceDirectory)) {
+			    	System.out.println(equalDirectories);
+			    	System.exit(0);
+			    }else {
+			    
+			    //print chosen destination directory
+			    //print list of files of destination directory
+			    //check if file name is equal to file which we want to copy
+			    System.out.println("Chosen destination directory:\n"+destinationDirectory);//in class Message
+			    String[] filesInDestinationDirectory;
+			    File filesinDestination=new File(destinationDirectory);
+			    filesInDestinationDirectory=filesinDestination.list();
+			    System.out.println("List of files in destination directory:\n");//in class message under the setlistoffiles setter
+			    
+			    System.out.println("Choose directory to save last opened surce and destination directory:");
+			    String directoryToSaveFile=scanner.nextLine();
+				 String lastSavedDirectories="directories.json";
+			     
+				 //make json objects
+				 ObjectMapper mapper=new ObjectMapper();
+				 JsonNode rootNode=mapper.createObjectNode();
+				 ObjectNode objectNode=(ObjectNode) rootNode;
+				 objectNode.put("sourceDirectory", sourceDirectory);
+				 objectNode.put("destinationDirectory", destinationDirectory);
+				 
+				 //add json object to file
+				 JsonFactory factory = new JsonFactory();
+				 try {
+					JsonGenerator generator= factory.createGenerator(new File(directoryToSaveFile+"/"+lastSavedDirectories), JsonEncoding.UTF8);
+					generator.useDefaultPrettyPrinter();
+					mapper.writeTree(generator, rootNode);
+				} catch (Exception e) {
+					
+					e.printStackTrace();
+				}
+			    
+			    String fileInDirectory="";
+			    
+			    for (String string : filesInDestinationDirectory) {
+					//System.out.println(string+"\n");
+			    	if(string.equals(file)) {
+						fileInDirectory=string;
+						break;
+					}
+					
+				}
+			    
+			    
+			  //if there is already file in the same name in destination folder 
+			  		//do not create new file do not delete from source directory
+			  		if(fileInDirectory.equals(file)) {
+			  			System.out.println(sameFileName);
+			  			System.exit(0);
+			  		}else {
+			  			
+			  			
+			  		//create file under the name from file which we want to copy in destination folder
+			  			//if failed exit the program with failed message
+			  			//else print successfully message
+			  			//output needs to be closed because it will not copy file content because other process will be used.
+			  			try {
+			  				FileOutputStream output=new FileOutputStream(destinationDirectory+"/"+file);
+			  				output.close();
+			  			} catch (IOException e) {
+			  				System.out.println("File creation failed.");//in class message
+			  				e.printStackTrace();
+			  				System.exit(0);
+			  			}
+			  			System.out.println("File successfully created.");//in class message
+			  			
+			  			
+						
+			  			//get file name from source directory and the directory and put it into path string
+			  			//if succesfully moved return successfuly message if not exit the program with message fail
+			  			String path=sourceDirectory+"/"+file;
+			  			String destination=destinationDirectory+"/"+file;
+			  			
+			  			try {
+			  				Path temp=Files.move(Paths.get(path), Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
+			  				 if(temp != null) 
+			  			        { 
+			  			            System.out.println("File renamed and moved successfully"); //in class message
+			  			        } 
+			  			        else
+			  			        { 
+			  			            System.out.println("Failed to move the file"); //in class message
+			  			        } 
+			  			} catch (IOException e) {
+			  				System.out.println("Failed file move");//substitute to File renamed and moved successfully.
+			  				
+			  				e.printStackTrace();
+			  				System.exit(0);
+			  			}
+			  			System.out.println("File successfuly moved.");//substitute to Failed to move the file
+			  			
+			  			
+			  			
+			  			
+			  			
+			  		}
+			    
 			 
 			 
 			 
@@ -66,7 +211,9 @@ public class ThreeClassMerge {
 		 }
 
 	}
-
 	}
+}
+
+	
 
 

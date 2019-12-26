@@ -16,19 +16,22 @@ public class MergeMove {
 		//need to make check if destination is equal source directory 
 		//if it is then terminate program with message
 		//source directory is equal to destination directory.
-		final String noneMessage="none";//in class message
+		final String noneMessage="none";//in class message three class merge
 		final String equalDirectories="Destination directory is equal to source directory. Please choose different source or destination directory.";//in class message
+		//in class message three class merge
 		final String emptySourceDir="There is no files in source directory please choose non empty directory.";//in class message
+		//in class message three class merge
 		final String sameFileName="There is already the same file name in this folder.";//in class message
+		//in class message three class merge
 		String file="";
 		//choose source directory
-		System.out.println("Choose source directory:");//in class message
+		System.out.println("Choose source directory:");//in class message //in class message three class merge
 		@SuppressWarnings("resource")
-		Scanner scanner=new Scanner(System.in);
-		String sourceDirectory=scanner.nextLine();
+		Scanner scanner=new Scanner(System.in);//in class message three class merge
+		String sourceDirectory=scanner.nextLine();//in class message three class merge
 		
 		//print chosen directory
-		System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message
+		System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message //in class message three class merge
 		
 		//list files in source directory
 		//create new file object of directory
