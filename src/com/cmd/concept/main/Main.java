@@ -9,16 +9,20 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
+import com.cmd.concept.implementations.FileParserImpl;
 import com.cmd.concept.implementations.InputImpl;
 import com.cmd.concept.interfaces.UserInput;
 import com.cmd.concept.messages.Message;
+import com.cmd.concept.pojo.SourceDestination;
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 
 public class Main {
 
-	public static void main(String[] args) {
-		InputImpl impl=new InputImpl();
-		impl.input();
-		
+	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
+		FileParserImpl impl=new FileParserImpl();
+		SourceDestination destination=impl.returnLastSavedLinks("mydirectory/directories.json");
+		System.out.println(destination.getSourceDirectory()+"\n"+destination.getDestinationDirectory());
 		
 		/*Message msg=new Message();
 	
