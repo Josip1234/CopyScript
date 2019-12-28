@@ -9,13 +9,18 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
+import com.cmd.concept.implementations.InputImpl;
+import com.cmd.concept.interfaces.UserInput;
 import com.cmd.concept.messages.Message;
 
 public class Main {
 
 	public static void main(String[] args) {
+		InputImpl impl=new InputImpl();
+		impl.input();
 		
-		Message msg=new Message();
+		
+		/*Message msg=new Message();
 	
 		//choose source directory
 		System.out.println(msg.getChooseSourceDirectory());//in class message
@@ -69,7 +74,7 @@ public class Main {
 	  				System.out.println(msg.getFileRenameAndMoveFailed());//substitute to File renamed and moved successfully.
 	  				
 	  			System.out.println(msg.getFileRenameAndMoveSuccess());//substitute to Failed to move the file
-	  		
+	  		*/
 	      
 
 	}
