@@ -35,18 +35,18 @@ public class ThreeClassMerge {
 		boolean open=false;
 		
 		Scanner scanner=new Scanner(System.in);
-		System.out.println("Open last saved source and destination directory? true for yes false for no");
+		System.out.println("Open last saved source and destination directory? true for yes false for no");//in class message
 		open=scanner.nextBoolean();
 		scanner.nextLine();
 		
 		 if(open==true) {
-			 System.out.println("Choose file which contains last saved source and destination directory:");
+			 System.out.println("Choose file which contains last saved source and destination directory:");//in class message
 			 String lastFile=scanner.nextLine();
-			 System.out.println("Reading json source files and parsing it to the variable...");
+			 System.out.println("Reading json source files and parsing it to the variable...");//not needed only for testing purposes
 			 ObjectMapper map=new ObjectMapper();
 			 try {
 				SourceDestination sd=map.readValue(new File(lastFile), SourceDestination.class);
-				System.out.println(sd.getSourceDirectory()+"\n"+sd.getDestinationDirectory());
+				System.out.println(sd.getSourceDirectory()+"\n"+sd.getDestinationDirectory());//not needed only for testing purposes
 				sourceDirectory=sd.getSourceDirectory();
 				destinationDirectory=sd.getDestinationDirectory();
 				
@@ -232,7 +232,7 @@ public class ThreeClassMerge {
 			    filesInDestinationDirectory=filesinDestination.list();
 			    System.out.println("List of files in destination directory:\n");//in class message under the setlistoffiles setter
 			    
-			    System.out.println("Choose directory to save last opened surce and destination directory:");
+			    System.out.println("Choose directory to save last opened surce and destination directory:");//in class message
 			    String directoryToSaveFile=scanner.nextLine();
 				 String lastSavedDirectories="directories.json";
 			     

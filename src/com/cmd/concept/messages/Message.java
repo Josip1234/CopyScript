@@ -17,6 +17,9 @@ public class Message {
 	final String fileCreationSuccess;
 	final String fileRenameAndMoveSuccess;
 	final String fileRenameAndMoveFailed;
+	final String openLastDirectory;
+	final String chooseFileLastSaved;
+	final String chooseDirectoryToSaveLastOpened;
 	
 	public Message() {
 		this.noneMessage="none";
@@ -30,12 +33,62 @@ public class Message {
 		this.fileCreationSuccess="File successfully created.";
 		this.fileRenameAndMoveSuccess="File renamed and moved successfully.";
 		this.fileRenameAndMoveFailed="Failed to move the file";
-		
+		this.openLastDirectory="Open last saved source and destination directory? true for yes false for no";
+		this.chooseFileLastSaved="Choose file which contains last saved source and destination directory:";
+		this.chooseDirectoryToSaveLastOpened="Choose directory to save last opened surce and destination directory:";
 	}
 	
 	
 	
 	
+
+
+
+
+
+	public String getChooseFileLastSaved() {
+		return chooseFileLastSaved;
+	}
+
+
+
+
+
+
+
+
+
+	public String getChooseDirectoryToSaveLastOpened() {
+		return chooseDirectoryToSaveLastOpened;
+	}
+
+
+
+
+
+
+
+
+
+	public String getOpenLastDirectory() {
+		return openLastDirectory;
+	}
+
+
+
+
+
+
+
+
+
+	public void setChosenFileMessage(String chosenFileMessage) {
+		this.chosenFileMessage = chosenFileMessage;
+	}
+
+
+
+
 
 
 
