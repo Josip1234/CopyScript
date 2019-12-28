@@ -1,4 +1,4 @@
-package com.cmd.concept;
+package com.cmd.concept.pojo;
 //will be used by jackson to parse json file 
 public class SourceDestination {
 	String sourceDirectory;
