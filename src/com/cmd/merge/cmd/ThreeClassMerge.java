@@ -55,10 +55,10 @@ public class ThreeClassMerge {
 				filesInSourceDirectory=filesInSource.list();
 				
 			    System.out.println("List of files in source directory:\n");//in class message
-			    if(filesInSourceDirectory.length>0) {
-			    	for (String string : filesInSourceDirectory) {
-						System.out.println(string+"\n");
-					}
+			    if(filesInSourceDirectory.length>0) {//in directory impl
+			    	for (String string : filesInSourceDirectory) {//in directory impl
+						System.out.println(string+"\n");//in directory impl
+					}//in directory impl
 			    	
 			    	 //choose file from source directory which you want to copy
 				    System.out.println("Choose file from source directory:\n");//in class message
@@ -158,10 +158,10 @@ public class ThreeClassMerge {
 				    
 				    
 			    	
-			    }else {
-			    	System.out.println(noneMessage);
-			    	System.out.println(emptySourceDir);
-			    	System.exit(0);
+			    }else {//in directory impl
+			    	System.out.println(noneMessage);//in directory impl
+			    	System.out.println(emptySourceDir);//in directory impl
+			    	System.exit(0);//in directory impl, maybe unessesary
 			    }
 			} catch (JsonParseException e) {
 				
