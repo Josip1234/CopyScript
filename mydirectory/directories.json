@@ -1,4 +1,4 @@
 {
-  "sourceDirectory" : "sourceDirectory",
-  "destinationDirectory" : "destinationDirectory"
+  "sourceDirectory" : "destinationDirectory",
+  "destinationDirectory" : "sourceDirectory"
 }
