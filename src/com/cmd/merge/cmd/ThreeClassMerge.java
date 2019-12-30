@@ -62,7 +62,7 @@ public class ThreeClassMerge {
 			    	
 			    	 //choose file from source directory which you want to copy
 				    System.out.println("Choose file from source directory:\n");//in class message
-				    String fileToMove=scanner.nextLine();
+				    String fileToMove=scanner.nextLine();//inputOperations
 				    file=fileToMove;
 				    //print chosen file from source directory
 				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message
@@ -176,11 +176,11 @@ public class ThreeClassMerge {
 			 System.exit(0);
 		 }else {
 			 
-			 System.out.println("Enter source and destination directory, etc...");
+			 System.out.println("Enter source and destination directory, etc...");//not needed
 			 
 				//choose source directory
-				System.out.println("Choose source directory:");
-				sourceDirectory=scanner.nextLine();
+				System.out.println("Choose source directory:"); //input impl
+				sourceDirectory=scanner.nextLine();//input impl
 				
 				//print chosen directory
 				System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message
@@ -198,7 +198,7 @@ public class ThreeClassMerge {
 			    	
 			    	 //choose file from source directory which you want to copy
 				    System.out.println("Choose file from source directory:\n");//in class message
-				    String fileToMove=scanner.nextLine();
+				    String fileToMove=scanner.nextLine();//inputOperations
 				    file=fileToMove;
 				    //print chosen file from source directory
 				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message
@@ -213,7 +213,7 @@ public class ThreeClassMerge {
 				
 				//choose destination directory
 			    System.out.println("Choose destination directory:");//in class message
-			    destinationDirectory=scanner.nextLine();
+			    destinationDirectory=scanner.nextLine();//input impl
 			    
 			    //after destination directory is chosen this check if 
 			    //destination directory is equal to source directory if it is then 

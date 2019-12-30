@@ -8,20 +8,20 @@ public class SourceDestination {
 		
 	}
 	public SourceDestination(String sourceDirectory, String destinationDirectory) {
-		this.sourceDirectory = sourceDirectory;
-		this.destinationDirectory = destinationDirectory;
+		this.sourceDirectory = sourceDirectory+"/";
+		this.destinationDirectory = destinationDirectory+"/";
 	}
 	public String getSourceDirectory() {
 		return sourceDirectory;
 	}
 	public void setSourceDirectory(String sourceDirectory) {
-		this.sourceDirectory = sourceDirectory;
+		this.sourceDirectory = sourceDirectory+"/";
 	}
 	public String getDestinationDirectory() {
 		return destinationDirectory;
 	}
 	public void setDestinationDirectory(String destinationDirectory) {
-		this.destinationDirectory = destinationDirectory;
+		this.destinationDirectory = destinationDirectory+"/";
 	}
 	@Override
 	public String toString() {

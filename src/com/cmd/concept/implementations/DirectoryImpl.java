@@ -9,7 +9,7 @@ import com.cmd.concept.messages.Message;
 import com.cmd.concept.pojo.SourceDestination;
 
 public class DirectoryImpl extends Message implements DirectoryOperations {
-
+//need also to list files in destination directory
 	@Override
 	public List<String> printSourceDirectoryFiles(SourceDestination source) {
 		List<String> listOfFiles=new ArrayList<String>();
