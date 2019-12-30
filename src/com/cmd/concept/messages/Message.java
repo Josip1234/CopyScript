@@ -237,7 +237,7 @@ public class Message {
 
 
 	public void setListOffilesMessage(String directory) {
-		this.listOffilesMessage = "List of files in "+ directory +" directory:\n";
+		this.listOffilesMessage = "List of files in "+ directory +"\n";
 	}
 
 

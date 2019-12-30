@@ -36,30 +36,30 @@ public class ThreeClassMerge {
 		
 		Scanner scanner=new Scanner(System.in);//init input class in main
 		System.out.println("Open last saved source and destination directory? true for yes false for no");//in class message
-		open=scanner.nextBoolean();
-		scanner.nextLine();
+		open=scanner.nextBoolean();//setter to set boolean input value in main
+		scanner.nextLine();//input is set to next line to get string ina main
 		
-		 if(open==true) {
-			 System.out.println("Choose file which contains last saved source and destination directory:");//in class message
-			 String lastFile=scanner.nextLine();
+		 if(open==true) {//in main class
+			 System.out.println("Choose file which contains last saved source and destination directory:");//in class message in main too
+			 String lastFile=scanner.nextLine();//in main
 			 System.out.println("Reading json source files and parsing it to the variable...");//not needed only for testing purposes
-			 ObjectMapper map=new ObjectMapper();
+			 ObjectMapper map=new ObjectMapper();//in file parser
 			 try {
-				SourceDestination sd=map.readValue(new File(lastFile), SourceDestination.class);
+				SourceDestination sd=map.readValue(new File(lastFile), SourceDestination.class);//in file parser
 				System.out.println(sd.getSourceDirectory()+"\n"+sd.getDestinationDirectory());//not needed only for testing purposes
-				sourceDirectory=sd.getSourceDirectory();
-				destinationDirectory=sd.getDestinationDirectory();
+				sourceDirectory=sd.getSourceDirectory();//in file parser
+				destinationDirectory=sd.getDestinationDirectory();//in file parser
 				
-				String[] filesInSourceDirectory;
-				File filesInSource=new File(sourceDirectory);
-				filesInSourceDirectory=filesInSource.list();
+				String[] filesInSourceDirectory; //in directory impl
+				File filesInSource=new File(sourceDirectory); // in directory impl
+				filesInSourceDirectory=filesInSource.list(); // in directory impl
 				
-			    System.out.println("List of files in source directory:\n");//in class message
+			    System.out.println("List of files in source directory:\n");//in class message and main class
 			    if(filesInSourceDirectory.length>0) {//in directory impl
 			    	for (String string : filesInSourceDirectory) {//in directory impl
 						System.out.println(string+"\n");//in directory impl
 					}//in directory impl
-			    	
+			  //-----------------------------------------------------------------------------------------  	
 			    	 //choose file from source directory which you want to copy
 				    System.out.println("Choose file from source directory:\n");//in class message
 				    String fileToMove=scanner.nextLine();//inputOperations

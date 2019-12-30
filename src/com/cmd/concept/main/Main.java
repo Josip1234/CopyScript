@@ -25,7 +25,27 @@ public class Main {
 		
 		SourceDestination sd=new SourceDestination();
 		Input input=new Input();
+		Message message=new Message();
 		
+		
+		message.printMessage(message.getOpenLastDirectory());
+		input.setOpen(input.nextBoolean());
+		input.nextLine();
+		
+		if(input.isOpen()==true) {
+			message.printMessage(message.getChooseFileLastSaved());
+			String lastFile=input.nextLine();
+			FileParserImpl impl=new FileParserImpl();
+			sd=impl.returnLastSavedLinks(lastFile);
+			message.setListOffilesMessage(sd.getSourceDirectory());
+			message.printMessage(message.getListOffilesMessage());
+			DirectoryImpl directoryImpl= new DirectoryImpl();
+			directoryImpl.printSourceDirectoryFiles(sd);
+			
+					
+		}else {
+			message.printMessage("False");
+		}
 	      
 
 	}
