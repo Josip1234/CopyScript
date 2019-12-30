@@ -5,6 +5,8 @@ public class SourceDestination {
 	String destinationDirectory;
 	
 	public SourceDestination() {
+		this.sourceDirectory="";
+		this.destinationDirectory="";
 		
 	}
 	public SourceDestination(String sourceDirectory, String destinationDirectory) {

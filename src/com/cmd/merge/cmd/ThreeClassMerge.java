@@ -27,14 +27,14 @@ public class ThreeClassMerge {
 		final String equalDirectories="Destination directory is equal to source directory. Please choose different source or destination directory.";//in class message
 		final String emptySourceDir="There is no files in source directory please choose non empty directory.";//in class message
 		final String sameFileName="There is already the same file name in this folder.";//in class message
-		String file="";
+		String file="";//in main
 		
 		
-		String sourceDirectory="";
-		String destinationDirectory="";
-		boolean open=false;
+		String sourceDirectory="";//init sourcedestination in main
+		String destinationDirectory="";//init sourcedestination in main
+		boolean open=false;//init input class in main
 		
-		Scanner scanner=new Scanner(System.in);
+		Scanner scanner=new Scanner(System.in);//init input class in main
 		System.out.println("Open last saved source and destination directory? true for yes false for no");//in class message
 		open=scanner.nextBoolean();
 		scanner.nextLine();
