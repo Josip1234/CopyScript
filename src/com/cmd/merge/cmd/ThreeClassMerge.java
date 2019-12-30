@@ -109,14 +109,14 @@ public class ThreeClassMerge {
 				  			//else print successfully message
 				  			//output needs to be closed because it will not copy file content because other process will be used.
 				  			try {
-				  				FileOutputStream output=new FileOutputStream(destinationDirectory+"/"+file);
-				  				output.close();
-				  			} catch (IOException e) {
+				  				FileOutputStream output=new FileOutputStream(destinationDirectory+"/"+file);//file parser impl
+				  				output.close();//file parser impl
+				  			} catch (IOException e) {//file parser impl
 				  				System.out.println("File creation failed.");//in class message
-				  				e.printStackTrace();
-				  				System.exit(0);
+				  				e.printStackTrace();//file parser impl
+				  				System.exit(0);//file parser impl
 				  			}
-				  			System.out.println("File successfully created.");//in class message
+				  			System.out.println("File successfully created.");//in class message//file parser impl
 				  			
 				  			
 							

@@ -20,10 +20,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 public class Main {
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
-		InputImpl impl=new InputImpl();
-		impl.enterSourceAndDestinationDirectory();
-		String fileToMove=impl.enterFileToCopyOrMove();
-		System.out.println(fileToMove);
+		FileParserImpl impl=new FileParserImpl();
+		SourceDestination destination=new SourceDestination();
+		destination.setDestinationDirectory("destinationDirectory");
+		impl.createFile(destination, "myfile.txt");
 		
 		
 	      

@@ -8,4 +8,5 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 
 public interface FileOperations {
 SourceDestination returnLastSavedLinks(String file) throws JsonParseException, JsonMappingException, IOException;
+void createFile(SourceDestination sourceDestination, String file);
 }
