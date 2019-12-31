@@ -27,7 +27,7 @@ public class DirectoryImpl extends Message implements DirectoryOperations {
 			 System.out.println(getEmptySourceDir());
 			 listOfFiles.add(getNoneMessage());
 			 listOfFiles.add(getEmptySourceDir());
-			 
+			 System.exit(0);
 		 }
       return listOfFiles;
 	}

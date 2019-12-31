@@ -59,21 +59,21 @@ public class ThreeClassMerge {
 			    	for (String string : filesInSourceDirectory) {//in directory impl
 						System.out.println(string+"\n");//in directory impl
 					}//in directory impl
-			  //-----------------------------------------------------------------------------------------  	
+			
 			    	 //choose file from source directory which you want to copy
-				    System.out.println("Choose file from source directory:\n");//in class message
+				    System.out.println("Choose file from source directory:\n");//in class message and main
 				    String fileToMove=scanner.nextLine();//inputOperations
-				    file=fileToMove;
+				    file=fileToMove;//in main
 				    //print chosen file from source directory
-				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message
+				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message and main
 				    //after destination directory is chosen this check if 
 				    //destination directory is equal to source directory if it is then 
 				    //app is terminated with message
-				    if(destinationDirectory.equals(sourceDirectory)) {
-				    	System.out.println(equalDirectories);
-				    	System.exit(0);
-				    }else {
-				    
+				    if(destinationDirectory.equals(sourceDirectory)) {//in main
+				    	System.out.println(equalDirectories);//in main
+				    	System.exit(0);//in main
+				    }else {//in main
+				    //------------------------------------------------------------
 				    //print chosen destination directory
 				    //print list of files of destination directory
 				    //check if file name is equal to file which we want to copy

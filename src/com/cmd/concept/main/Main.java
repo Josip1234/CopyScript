@@ -41,6 +41,18 @@ public class Main {
 			message.printMessage(message.getListOffilesMessage());
 			DirectoryImpl directoryImpl= new DirectoryImpl();
 			directoryImpl.printSourceDirectoryFiles(sd);
+			message.printMessage(message.getChooseFileMessage());
+			String fileToMove=input.nextLine();
+			file=fileToMove;
+			message.setChosenFileMessage(file, sd.getSourceDirectory());
+			message.printMessage(message.getChosenFileMessage());
+			if(sd.getDestinationDirectory().equals(sd.getSourceDirectory())) {
+				message.printMessage(message.getEqualDirectories());
+				System.exit(0);
+						
+			}else {
+				
+			}
 			
 					
 		}else {
