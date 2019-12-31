@@ -21,6 +21,7 @@ public class Message {
 	final String chooseFileLastSaved;
 	final String chooseDirectoryToSaveLastOpened;
 	
+	
 	public Message() {
 		this.noneMessage="none";
 		this.equalDirectories="Destination directory is equal to source directory. Please choose different source or destination directory.";
@@ -36,11 +37,21 @@ public class Message {
 		this.openLastDirectory="Open last saved source and destination directory? true for yes false for no";
 		this.chooseFileLastSaved="Choose file which contains last saved source and destination directory:";
 		this.chooseDirectoryToSaveLastOpened="Choose directory to save last opened surce and destination directory:";
+		
 	}
 	
 	
 	
 	
+
+
+
+
+
+
+
+
+
 
 
 

@@ -73,35 +73,35 @@ public class ThreeClassMerge {
 				    	System.out.println(equalDirectories);//in main
 				    	System.exit(0);//in main
 				    }else {//in main
-				    //------------------------------------------------------------
+				    
 				    //print chosen destination directory
 				    //print list of files of destination directory
 				    //check if file name is equal to file which we want to copy
-				    System.out.println("Chosen destination directory:\n"+destinationDirectory);//in class Message
-				    String[] filesInDestinationDirectory;
-				    File filesinDestination=new File(destinationDirectory);
-				    filesInDestinationDirectory=filesinDestination.list();
-				    System.out.println("List of files in destination directory:\n");//in class message under the setlistoffiles setter
+				    System.out.println("Chosen destination directory:\n"+destinationDirectory);//in class Message and main
+				    String[] filesInDestinationDirectory;//in directory impl
+				    File filesinDestination=new File(destinationDirectory);//in directory impl
+				    filesInDestinationDirectory=filesinDestination.list();//in directory impl
+				    System.out.println("List of files in destination directory:\n");//in class message under the setlistoffiles setter not needed
 				    
 				    
-				    String fileInDirectory="";
+				    String fileInDirectory="";//in directory impl and main
 				    
-				    for (String string : filesInDestinationDirectory) {
+				    for (String string : filesInDestinationDirectory) {//in directory impl
 						//System.out.println(string+"\n");
-				    	if(string.equals(file)) {
-							fileInDirectory=string;
-							break;
-						}
+				    	if(string.equals(file)) {//in directory impl
+							fileInDirectory=string;//in directory impl
+							break;//in directory impl
+						}//in directory impl
 						
-					}
+					}//in directory impl
 				    
-				    
+				   
 				  //if there is already file in the same name in destination folder 
 				  		//do not create new file do not delete from source directory
-				  		if(fileInDirectory.equals(file)) {
-				  			System.out.println(sameFileName);
-				  			System.exit(0);
-				  		}else {
+				  		if(fileInDirectory.equals(file)) {//in main
+				  			System.out.println(sameFileName);//in main
+				  			System.exit(0);//in main
+				  		}else {//in main
 				  			
 				  			
 				  		//create file under the name from file which we want to copy in destination folder
@@ -122,39 +122,39 @@ public class ThreeClassMerge {
 							
 				  			//get file name from source directory and the directory and put it into path string
 				  			//if succesfully moved return successfuly message if not exit the program with message fail
-				  			String path=sourceDirectory+"/"+file;
-				  			String destination=destinationDirectory+"/"+file;
+				  			String path=sourceDirectory+"/"+file;//in file parser
+				  			String destination=destinationDirectory+"/"+file;//in file parser
 				  			
-				  			try {
-				  				Path temp=Files.move(Paths.get(path), Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);
-				  				 if(temp != null) 
-				  			        { 
-				  			            System.out.println("File renamed and moved successfully"); //in class message
-				  			        } 
-				  			        else
-				  			        { 
-				  			            System.out.println("Failed to move the file"); //in class message
-				  			        } 
-				  			} catch (IOException e) {
-				  				System.out.println("Failed file move");//substitute to File renamed and moved successfully.
+				  			try {//in file parser
+				  				Path temp=Files.move(Paths.get(path), Paths.get(destination), StandardCopyOption.REPLACE_EXISTING);//in file parser
+				  				 if(temp != null) //in file parser
+				  			        { //in file parser
+				  			            System.out.println("File renamed and moved successfully"); //in class message//in file parser
+				  			        } //in file parser
+				  			        else//in file parser
+				  			        { //in file parser
+				  			            System.out.println("Failed to move the file"); //in class message//in file parser
+				  			        } //in file parser
+				  			} catch (IOException e) {//in file parser
+				  				System.out.println("Failed file move");//substitute to File renamed and moved successfully.//in file parser
 				  				
-				  				e.printStackTrace();
-				  				System.exit(0);
-				  			}
-				  			System.out.println("File successfuly moved.");//substitute to Failed to move the file
+				  				e.printStackTrace();//in file parser
+				  				System.exit(0);//in file parser
+				  			}//in file parser
+				  			System.out.println("File successfuly moved.");//substitute to Failed to move the file//in file parser
 				  			
 				  			
 				  			
 				  			
 				  			
-				  		}
+				  		}//in file parser
 				    
 				 
 				 
 				 
 				 
-				 System.exit(0);
-			 }
+				 System.exit(0);//in main
+			 }//in file parser
 				    
 				    
 			    	
@@ -163,17 +163,18 @@ public class ThreeClassMerge {
 			    	System.out.println(emptySourceDir);//in directory impl
 			    	System.exit(0);//in directory impl, maybe unessesary
 			    }
-			} catch (JsonParseException e) {
+			} catch (JsonParseException e) {//extra
 				
-				e.printStackTrace();
-			} catch (JsonMappingException e) {
+				e.printStackTrace();//extra
+			} catch (JsonMappingException e) {//extra
 				
-				e.printStackTrace();
-			} catch (IOException e) {
+				e.printStackTrace();//extra
+			} catch (IOException e) {//extra
 			
-				e.printStackTrace();
-			}
-			 System.exit(0);
+				e.printStackTrace();//extra
+			}//extra
+			 System.exit(0);//extra
+			 //-------------------------------------------------------------------------
 		 }else {
 			 
 			 System.out.println("Enter source and destination directory, etc...");//not needed

@@ -9,6 +9,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
+import javax.swing.JTable.PrintMode;
+
 import com.cmd.concept.implementations.DirectoryImpl;
 import com.cmd.concept.implementations.FileParserImpl;
 import com.cmd.concept.implementations.InputImpl;
@@ -26,7 +28,8 @@ public class Main {
 		SourceDestination sd=new SourceDestination();
 		Input input=new Input();
 		Message message=new Message();
-		
+		DirectoryImpl directoryImpl= new DirectoryImpl();
+		FileParserImpl impl=new FileParserImpl();
 		
 		message.printMessage(message.getOpenLastDirectory());
 		input.setOpen(input.nextBoolean());
@@ -35,11 +38,10 @@ public class Main {
 		if(input.isOpen()==true) {
 			message.printMessage(message.getChooseFileLastSaved());
 			String lastFile=input.nextLine();
-			FileParserImpl impl=new FileParserImpl();
+			
 			sd=impl.returnLastSavedLinks(lastFile);
 			message.setListOffilesMessage(sd.getSourceDirectory());
-			message.printMessage(message.getListOffilesMessage());
-			DirectoryImpl directoryImpl= new DirectoryImpl();
+			message.printMessage(message.getListOffilesMessage());	
 			directoryImpl.printSourceDirectoryFiles(sd);
 			message.printMessage(message.getChooseFileMessage());
 			String fileToMove=input.nextLine();
@@ -51,6 +53,20 @@ public class Main {
 				System.exit(0);
 						
 			}else {
+				
+				message.setChosenDestinationDirectoryMessage(sd.getDestinationDirectory());
+				message.printMessage(message.getChosenDestinationDirectoryMessage());
+				String fileInDirectory=directoryImpl.returnFileNameInDestinationDirectory(sd, file);
+				message.printMessage(fileInDirectory);
+				
+				if(fileInDirectory.equals(file)) {
+					message.printMessage(message.getSameFileName());
+					System.exit(0);
+				}else {
+					impl.createFile(sd, file);
+					impl.moveFile(sd, file);
+				}
+				System.exit(0);
 				
 			}
 			

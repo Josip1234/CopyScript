@@ -32,4 +32,25 @@ public class DirectoryImpl extends Message implements DirectoryOperations {
       return listOfFiles;
 	}
 
+	@Override
+	public String returnFileNameInDestinationDirectory(SourceDestination destination, String file) {
+		    String[] filesInDestinationDirectory;
+		    File filesinDestination=new File(destination.getDestinationDirectory());
+		    filesInDestinationDirectory=filesinDestination.list();
+		    
+		    String fileInDirectory="";
+		    
+		    for (String string : filesInDestinationDirectory) {
+				//System.out.println(string+"\n");
+		    	if(string.equals(file)) {
+					fileInDirectory=string;
+					break;
+				}
+				
+			}
+		 
+		    
+		return fileInDirectory;
+	}
+
 }
