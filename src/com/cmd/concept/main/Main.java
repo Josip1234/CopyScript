@@ -30,6 +30,7 @@ public class Main {
 		Message message=new Message();
 		DirectoryImpl directoryImpl= new DirectoryImpl();
 		FileParserImpl impl=new FileParserImpl();
+		InputImpl inputImpl=new InputImpl();
 		
 		message.printMessage(message.getOpenLastDirectory());
 		input.setOpen(input.nextBoolean());
@@ -43,9 +44,7 @@ public class Main {
 			message.setListOffilesMessage(sd.getSourceDirectory());
 			message.printMessage(message.getListOffilesMessage());	
 			directoryImpl.printSourceDirectoryFiles(sd);
-			message.printMessage(message.getChooseFileMessage());
-			String fileToMove=input.nextLine();
-			file=fileToMove;
+			file=inputImpl.enterFileToCopyOrMove();
 			message.setChosenFileMessage(file, sd.getSourceDirectory());
 			message.printMessage(message.getChosenFileMessage());
 			if(sd.getDestinationDirectory().equals(sd.getSourceDirectory())) {
@@ -72,7 +71,11 @@ public class Main {
 			
 					
 		}else {
-			message.printMessage("False");
+		   sd=inputImpl.enterSourceAndDestinationDirectory();
+		   directoryImpl.printSourceDirectoryFiles(sd);
+		   file=inputImpl.enterFileToCopyOrMove();
+		   message.setChosenFileMessage(file, sd.getSourceDirectory());
+		   message.printMessage(message.getChosenFileMessage());
 		}
 	      
 

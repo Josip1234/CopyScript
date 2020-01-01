@@ -174,35 +174,35 @@ public class ThreeClassMerge {
 				e.printStackTrace();//extra
 			}//extra
 			 System.exit(0);//extra
-			 //-------------------------------------------------------------------------
+		
 		 }else {
 			 
 			 System.out.println("Enter source and destination directory, etc...");//not needed
 			 
 				//choose source directory
-				System.out.println("Choose source directory:"); //input impl
-				sourceDirectory=scanner.nextLine();//input impl
+				System.out.println("Choose source directory:"); //input impl and in main
+				sourceDirectory=scanner.nextLine();//input impl in input implementation
 				
 				//print chosen directory
-				System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message
+				System.out.println("Chosen source directory:\n"+sourceDirectory);//in class message and main
 				
 				
-				String[] filesInSourceDirectory;
-				File filesInSource=new File(sourceDirectory);
-				filesInSourceDirectory=filesInSource.list();
+				String[] filesInSourceDirectory; //in main
+				File filesInSource=new File(sourceDirectory);//in main
+				filesInSourceDirectory=filesInSource.list(); // in main
 				
 			    System.out.println("List of files in source directory:\n");//in class message
-			    if(filesInSourceDirectory.length>0) {
-			    	for (String string : filesInSourceDirectory) {
-						System.out.println(string+"\n");
-					}
+			    if(filesInSourceDirectory.length>0) { //in main
+			    	for (String string : filesInSourceDirectory) {//in main
+						System.out.println(string+"\n");//in main
+					}//in main
 			    	
 			    	 //choose file from source directory which you want to copy
-				    System.out.println("Choose file from source directory:\n");//in class message
-				    String fileToMove=scanner.nextLine();//inputOperations
-				    file=fileToMove;
+				    System.out.println("Choose file from source directory:\n");//in class message in main and inputimpl
+				    String fileToMove=scanner.nextLine();//inputOperations and main and inputinom
+				    file=fileToMove; //in main and input impl
 				    //print chosen file from source directory
-				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message
+				    System.out.println("You have chosen "+fileToMove+" from this directory: "+sourceDirectory);//in class message in main
 			    	
 			    	
 			    }else {
@@ -213,9 +213,9 @@ public class ThreeClassMerge {
 			    
 				
 				//choose destination directory
-			    System.out.println("Choose destination directory:");//in class message
-			    destinationDirectory=scanner.nextLine();//input impl
-			    
+			    System.out.println("Choose destination directory:");//in class message in main and inputimpl
+			    destinationDirectory=scanner.nextLine();//input impl and in input implementation
+			  //----------------------------------------------------------------  
 			    //after destination directory is chosen this check if 
 			    //destination directory is equal to source directory if it is then 
 			    //app is terminated with message
@@ -227,7 +227,7 @@ public class ThreeClassMerge {
 			    //print chosen destination directory
 			    //print list of files of destination directory
 			    //check if file name is equal to file which we want to copy
-			    System.out.println("Chosen destination directory:\n"+destinationDirectory);//in class Message
+			    System.out.println("Chosen destination directory:\n"+destinationDirectory);//in class Message in input implementation and main
 			    String[] filesInDestinationDirectory;
 			    File filesinDestination=new File(destinationDirectory);
 			    filesInDestinationDirectory=filesinDestination.list();
