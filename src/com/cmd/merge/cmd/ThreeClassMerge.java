@@ -215,14 +215,14 @@ public class ThreeClassMerge {
 				//choose destination directory
 			    System.out.println("Choose destination directory:");//in class message in main and inputimpl
 			    destinationDirectory=scanner.nextLine();//input impl and in input implementation
-			  //----------------------------------------------------------------  
+			
 			    //after destination directory is chosen this check if 
 			    //destination directory is equal to source directory if it is then 
 			    //app is terminated with message
-			    if(destinationDirectory.equals(sourceDirectory)) {
-			    	System.out.println(equalDirectories);
-			    	System.exit(0);
-			    }else {
+			    if(destinationDirectory.equals(sourceDirectory)) {// in main
+			    	System.out.println(equalDirectories);//in main
+			    	System.exit(0);//in main
+			    }else {//in main
 			    
 			    //print chosen destination directory
 			    //print list of files of destination directory

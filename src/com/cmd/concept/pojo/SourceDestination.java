@@ -25,12 +25,7 @@ public class SourceDestination {
 	public void setDestinationDirectory(String destinationDirectory) {
 		this.destinationDirectory = destinationDirectory+"/";
 	}
-	@Override
-	public String toString() {
-		return "SourceDestination [sourceDirectory=" + sourceDirectory + ", destinationDirectory="
-				+ destinationDirectory + "]";
-	}
-	
+
 	
 
 }
