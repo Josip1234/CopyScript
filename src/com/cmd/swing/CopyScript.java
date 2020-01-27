@@ -25,6 +25,8 @@ import javax.swing.JPanel;
 public class CopyScript {
 
 	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -55,16 +57,20 @@ public class CopyScript {
 	private void initialize() {
 		String title="Copy script Application";
 		frame = new JFrame(title);
+		frame.setResizable(false);
 		frame.getContentPane().setBackground(SystemColor.window);
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(200, 200, 600, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new GridLayout(1, 0, 0, 0));
+		frame.getContentPane().setLayout(new GridLayout(2, 2, 0, 0));
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(SystemColor.text);
 		frame.getContentPane().add(panel);
 		
+		
+		
 		JButton btnChooseSourceDirectory = new JButton("Choose source directory");
+		
 		btnChooseSourceDirectory.addActionListener(new ActionListener() {
 			
 			@Override
@@ -73,16 +79,53 @@ public class CopyScript {
 				fileChooser.setBackground(SystemColor.window);
 				fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 				fileChooser.setDialogTitle("Choose source directory:");
-				fileChooser.setApproveButtonText("Open directory:");
+				fileChooser.setApproveButtonText("Open directory");
 				int returnValue=fileChooser.showOpenDialog(null);
 				if(returnValue==JFileChooser.APPROVE_OPTION) {
 					File seleFile = fileChooser.getSelectedFile();
 					System.out.println("You selected: "+ seleFile);
+					
+					textField.setText(seleFile.toString());
 				}
 				
 			}
 		});
 		panel.add(btnChooseSourceDirectory);
+		
+		textField = new JTextField();
+		textField.setEditable(false);
+		panel.add(textField);
+		textField.setColumns(25);
+		
+		JButton btnNewButton = new JButton("Choose destin directory:");
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JFileChooser fileChooser=new JFileChooser();
+				fileChooser.setBackground(SystemColor.window);
+				fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+				fileChooser.setDialogTitle("Choose destination directory:");
+				fileChooser.setApproveButtonText("Open directory");
+				int returnValue=fileChooser.showOpenDialog(null);
+				if(returnValue==JFileChooser.APPROVE_OPTION) {
+					File seleFile = fileChooser.getSelectedFile();
+					System.out.println("You selected: "+ seleFile);
+					
+					textField_1.setText(seleFile.toString());
+				}
+				
+			}
+		});
+		panel.add(btnNewButton);
+		
+		textField_1 = new JTextField();
+		textField_1.setEditable(false);
+		panel.add(textField_1);
+		textField_1.setColumns(25);
+		
+		
+		
+	
 		
 	}
 
