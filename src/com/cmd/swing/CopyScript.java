@@ -3,6 +3,8 @@ package com.cmd.swing;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import java.awt.GridBagLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -21,6 +23,9 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.SystemColor;
 import javax.swing.JPanel;
+import java.awt.FlowLayout;
+import java.awt.Dialog.ModalExclusionType;
+import java.awt.Window.Type;
 
 public class CopyScript {
 
@@ -35,8 +40,35 @@ public class CopyScript {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CopyScript window = new CopyScript();
-					window.frame.setVisible(true);
+					int response=JOptionPane.showConfirmDialog(null, "Open last source and destination directory?",
+							"Open last directories", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+					switch (response) {
+					case JOptionPane.YES_OPTION:
+						System.out.println("You have chosen yes.");
+						break;
+						
+					case JOptionPane.NO_OPTION:
+						CopyScript window = new CopyScript();
+						window.frame.setVisible(true);
+						break;
+						
+
+					case JOptionPane.CANCEL_OPTION:
+						System.exit(0);
+						break;
+						
+					case JOptionPane.CLOSED_OPTION:
+						System.exit(0);
+						break;
+						
+					default:
+						window = new CopyScript();
+						window.frame.setVisible(true);
+						
+						
+					}
+					
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -57,19 +89,23 @@ public class CopyScript {
 	private void initialize() {
 		String title="Copy script Application";
 		frame = new JFrame(title);
+		frame.setType(Type.POPUP);
 		frame.setResizable(false);
 		frame.getContentPane().setBackground(SystemColor.window);
-		frame.setBounds(200, 200, 600, 400);
+		frame.setBounds(200, 200, 600, 150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new GridLayout(2, 2, 0, 0));
+		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 574, 84);
 		panel.setBackground(SystemColor.text);
 		frame.getContentPane().add(panel);
 		
 		
 		
 		JButton btnChooseSourceDirectory = new JButton("Choose source directory");
+		btnChooseSourceDirectory.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		btnChooseSourceDirectory.setBounds(0, 0, 100, 100);
 		
 		btnChooseSourceDirectory.addActionListener(new ActionListener() {
 			
@@ -90,14 +126,23 @@ public class CopyScript {
 				
 			}
 		});
+		panel.setLayout(new GridLayout(0, 2, 10, 15));
 		panel.add(btnChooseSourceDirectory);
 		
 		textField = new JTextField();
-		textField.setEditable(false);
 		panel.add(textField);
+		textField.setEditable(false);
 		textField.setColumns(25);
 		
-		JButton btnNewButton = new JButton("Choose destin directory:");
+		JButton btnNewButton = new JButton("Choose destination directory");
+		panel.add(btnNewButton);
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		
+		textField_1 = new JTextField();
+		panel.add(textField_1);
+		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+		textField_1.setEditable(false);
+		textField_1.setColumns(25);
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -116,12 +161,6 @@ public class CopyScript {
 				
 			}
 		});
-		panel.add(btnNewButton);
-		
-		textField_1 = new JTextField();
-		textField_1.setEditable(false);
-		panel.add(textField_1);
-		textField_1.setColumns(25);
 		
 		
 		
