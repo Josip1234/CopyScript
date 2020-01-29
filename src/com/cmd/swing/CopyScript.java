@@ -92,7 +92,7 @@ public class CopyScript {
 		frame.setType(Type.POPUP);
 		frame.setResizable(false);
 		frame.getContentPane().setBackground(SystemColor.window);
-		frame.setBounds(200, 200, 600, 150);
+		frame.setBounds(200, 200, 600, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -144,6 +144,8 @@ public class CopyScript {
 		textField_1.setEditable(false);
 		textField_1.setColumns(25);
 		
+		
+		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JFileChooser fileChooser=new JFileChooser();
@@ -157,6 +159,10 @@ public class CopyScript {
 					System.out.println("You selected: "+ seleFile);
 					
 					textField_1.setText(seleFile.toString());
+					JButton btnNewButton_1 = new JButton("Choose file to move:");
+					btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
+					btnNewButton_1.setBounds(133, 95, 309, 41);
+					frame.getContentPane().add(btnNewButton_1);
 				}
 				
 			}
@@ -167,5 +173,4 @@ public class CopyScript {
 	
 		
 	}
-
 }
