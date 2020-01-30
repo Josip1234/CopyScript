@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.SystemColor;
+import java.awt.Window;
+
 import javax.swing.JPanel;
 import java.awt.FlowLayout;
 import java.awt.Dialog.ModalExclusionType;
@@ -163,6 +165,17 @@ public class CopyScript {
 					btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 					btnNewButton_1.setBounds(133, 95, 309, 41);
 					frame.getContentPane().add(btnNewButton_1);
+					
+					btnNewButton_1.addActionListener(new ActionListener() {
+						
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							frame.setVisible(false);
+							//here it will be visible tree view like list of files in folder and button which will be used
+							//to select those files
+							
+						}
+					});
 				}
 				
 			}
