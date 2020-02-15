@@ -139,6 +139,8 @@ public class MainApp {
 			   mntmDeleteFile.setEnabled(false);
 			   mntmCreateNewFile.setEnabled(false);
 			   mntmListFilesIn_1.setEnabled(false);
+			   
+			   mntmOpenLastDirectories.setEnabled(false);
 			
 		}
 	});
@@ -154,6 +156,8 @@ public class MainApp {
 				   mntmDeleteFile.setEnabled(true);
 				   mntmCreateNewFile.setEnabled(true);
 				   mntmListFilesIn_1.setEnabled(true);
+				   
+				   mntmOpenLastDirectories.setEnabled(false);
 				
 			}
 		});
