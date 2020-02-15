@@ -115,6 +115,16 @@ public class MainApp {
 			public void actionPerformed(ActionEvent e) {
 			   System.out.println(e.getActionCommand());
 			   System.out.println(mntmCopyFile.getActionCommand());
+			   mntmCopyFile.setEnabled(true);
+			   mntmMoveFile.setEnabled(true);
+			   mntmChooseFile.setEnabled(true);
+			   mntmDeleteFile.setEnabled(true);
+			   mntmCreateNewFile.setEnabled(true);
+			   mntmOpenLastDirectories.setEnabled(true);
+			   mntmOpenDirectories.setEnabled(true);
+			   mntmOpenDestinationDirectory.setEnabled(true);
+			   mntmListFilesIn.setEnabled(true);
+			   mntmListFilesIn_1.setEnabled(true);
 			   
 				
 			}
