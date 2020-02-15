@@ -142,7 +142,21 @@ public class MainApp {
 			
 		}
 	});
-		
+		mntmOpenDestinationDirectory.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				mntmListFilesIn.setEnabled(false);
+				mntmChooseFile.setEnabled(false);
+				
+				  mntmCopyFile.setEnabled(true);
+				   mntmMoveFile.setEnabled(true);
+				   mntmDeleteFile.setEnabled(true);
+				   mntmCreateNewFile.setEnabled(true);
+				   mntmListFilesIn_1.setEnabled(true);
+				
+			}
+		});
 		}
 	
 };
