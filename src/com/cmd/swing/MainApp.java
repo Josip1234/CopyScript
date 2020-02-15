@@ -120,9 +120,6 @@ public class MainApp {
 			   mntmChooseFile.setEnabled(true);
 			   mntmDeleteFile.setEnabled(true);
 			   mntmCreateNewFile.setEnabled(true);
-			   mntmOpenLastDirectories.setEnabled(true);
-			   mntmOpenDirectories.setEnabled(true);
-			   mntmOpenDestinationDirectory.setEnabled(true);
 			   mntmListFilesIn.setEnabled(true);
 			   mntmListFilesIn_1.setEnabled(true);
 			   
@@ -130,8 +127,24 @@ public class MainApp {
 			}
 		});
 		
+	mntmOpenDirectories.addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			mntmListFilesIn.setEnabled(true);
+			mntmChooseFile.setEnabled(true);
+			
+			  mntmCopyFile.setEnabled(false);
+			   mntmMoveFile.setEnabled(false);
+			   mntmDeleteFile.setEnabled(false);
+			   mntmCreateNewFile.setEnabled(false);
+			   mntmListFilesIn_1.setEnabled(false);
+			
+		}
+	});
 		
 		}
+	
 };
 /*		
 mntmOpenLastDirectories.addActionListener(new ActionListener() {
