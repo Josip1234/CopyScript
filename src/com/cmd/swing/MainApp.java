@@ -85,8 +85,15 @@ public class MainApp {
 		JMenu mnDirectoryOperations = new JMenu("Directory operations");
 		menuBar.add(mnDirectoryOperations);
 		
-		JMenuItem mntmOpenLastDirectories = new JMenuItem("Open last directories");
+		JMenu mntmOpenLastDirectories = new JMenu("Open last directories");
 		mnDirectoryOperations.add(mntmOpenLastDirectories);
+		
+		JMenuItem mntmDefaultJson = new JMenuItem("Default json");
+		mntmOpenLastDirectories.add(mntmDefaultJson);
+		
+		JMenuItem mntmOpenJsonFile = new JMenuItem("Open json file");
+		mntmOpenLastDirectories.add(mntmOpenJsonFile);
+		
 	
 		
 		JMenuItem mntmOpenDirectories = new JMenuItem("Open source directory");
@@ -109,7 +116,7 @@ public class MainApp {
 		JMenu mnTerminateProgram = new JMenu("Terminate program");
 		menuBar.add(mnTerminateProgram);
 		
-	mntmOpenLastDirectories.addActionListener(new ActionListener() {
+		mntmOpenJsonFile.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -122,7 +129,28 @@ public class MainApp {
 			   mntmCreateNewFile.setEnabled(true);
 			   mntmListFilesIn.setEnabled(true);
 			   mntmListFilesIn_1.setEnabled(true);
+			   mntmOpenDirectories.setEnabled(false);
+			   mntmOpenDestinationDirectory.setEnabled(false);
 			   
+				
+			}
+		});
+		
+		mntmDefaultJson.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			   System.out.println(e.getActionCommand());
+			   System.out.println(mntmCopyFile.getActionCommand());
+			   mntmCopyFile.setEnabled(true);
+			   mntmMoveFile.setEnabled(true);
+			   mntmChooseFile.setEnabled(true);
+			   mntmDeleteFile.setEnabled(true);
+			   mntmCreateNewFile.setEnabled(true);
+			   mntmListFilesIn.setEnabled(true);
+			   mntmListFilesIn_1.setEnabled(true);
+			   mntmOpenDirectories.setEnabled(false);
+			   mntmOpenDestinationDirectory.setEnabled(false);
 				
 			}
 		});
