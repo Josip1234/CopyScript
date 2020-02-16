@@ -20,7 +20,9 @@ public class Message {
 	final String openLastDirectory;
 	final String chooseFileLastSaved;
 	final String chooseDirectoryToSaveLastOpened;
-	
+	public static final String fileOperations="File operations";
+	public static final String copyFile="Copy";
+	public static final String moveFile="Move";
 	
 	public Message() {
 		this.noneMessage="none";
@@ -38,11 +40,28 @@ public class Message {
 		this.chooseFileLastSaved="Choose file which contains last saved source and destination directory:";
 		this.chooseDirectoryToSaveLastOpened="Choose directory to save last opened surce and destination directory:";
 		
+		
 	}
 	
 	
 	
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

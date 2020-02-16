@@ -29,7 +29,7 @@ import java.awt.FlowLayout;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.Window.Type;
 
-public class CopyScript {
+public class CopyScript2 {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -50,7 +50,7 @@ public class CopyScript {
 						break;
 						
 					case JOptionPane.NO_OPTION:
-						CopyScript window = new CopyScript();
+						CopyScript2 window = new CopyScript2();
 						window.frame.setVisible(true);
 						break;
 						
@@ -64,7 +64,7 @@ public class CopyScript {
 						break;
 						
 					default:
-						window = new CopyScript();
+						window = new CopyScript2();
 						window.frame.setVisible(true);
 						
 						
@@ -81,7 +81,7 @@ public class CopyScript {
 	/**
 	 * Create the application.
 	 */
-	public CopyScript() {
+	public CopyScript2() {
 		initialize();
 	}
 
