@@ -17,6 +17,9 @@ public class SwingInit implements CopyInterface {
 		private JMenu fileOperations;
 		private JMenuItem copyFile;
 		private JMenuItem moveFile;
+		private JMenuItem chooseFile;
+		private JMenuItem deleteFile;
+		private JMenuItem createFile;
 		
 
 		
@@ -29,7 +32,16 @@ public class SwingInit implements CopyInterface {
 			this.fileOperations=new JMenu(Message.fileOperations);
 			this.copyFile=new JMenuItem(Message.copyFile);
 			this.moveFile=new JMenuItem(Message.moveFile);
+			this.chooseFile=new JMenuItem(Message.chooseFile);
+			this.deleteFile=new JMenuItem(Message.deleteFile);
+			this.createFile=new JMenuItem(Message.createFile);
 			this.frame=initialize(this.frame);
+		}
+		
+		
+
+		public JMenuItem getDeleteFile() {
+			return deleteFile;
 		}
 
 		@Override
@@ -49,6 +61,15 @@ public class SwingInit implements CopyInterface {
 			getMoveFile().setEnabled(false);
 			getFileOperations().add(getMoveFile());
 			
+			getChooseFile().setEnabled(false);
+			getFileOperations().add(getChooseFile());
+			
+			getDeleteFile().setEnabled(false);
+			getFileOperations().add(getDeleteFile());
+			
+			getCreateFile().setEnabled(false);
+			getFileOperations().add(getCreateFile());
+			
 			return frame;
 			
 			
@@ -56,6 +77,14 @@ public class SwingInit implements CopyInterface {
 		}
 		
 		
+
+		public JMenuItem getCreateFile() {
+			return createFile;
+		}
+
+		public JMenuItem getChooseFile() {
+			return chooseFile;
+		}
 
 		public JMenuItem getCopyFile() {
 			return copyFile;
@@ -95,18 +124,6 @@ public class SwingInit implements CopyInterface {
 		/***
 		 * 
 		 *     
-		
-		JMenuItem mntmChooseFile = new JMenuItem("Choose file");
-		mntmChooseFile.setEnabled(false);
-		mnNewMenu.add(mntmChooseFile);
-		
-		JMenuItem mntmDeleteFile = new JMenuItem("Delete file");
-		mntmDeleteFile.setEnabled(false);
-		mnNewMenu.add(mntmDeleteFile);
-		
-		JMenuItem mntmCreateNewFile = new JMenuItem("Create new file");
-		mntmCreateNewFile.setEnabled(false);
-		mnNewMenu.add(mntmCreateNewFile);
 		
 		JMenu mnDirectoryOperations = new JMenu("Directory operations");
 		menuBar.add(mnDirectoryOperations);

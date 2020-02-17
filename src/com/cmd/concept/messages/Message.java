@@ -23,6 +23,9 @@ public class Message {
 	public static final String fileOperations="File operations";
 	public static final String copyFile="Copy";
 	public static final String moveFile="Move";
+	public static final String chooseFile="Choose";
+	public static final String deleteFile="Delete";
+	public static final String createFile="Create";
 	
 	public Message() {
 		this.noneMessage="none";
