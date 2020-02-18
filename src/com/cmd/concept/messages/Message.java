@@ -26,6 +26,16 @@ public class Message {
 	public static final String chooseFile="Choose";
 	public static final String deleteFile="Delete";
 	public static final String createFile="Create";
+	public static final String directoryOperations="Directory operations";
+	public static final String openLastDirectories="Open last directories";
+	public static final String defaultJson="Default json";
+	public static final String openJsonFile="Open json file";
+	public static final String openSourceDirectory="Open source directory";
+	public static final String openDestinationDirectory="Open destination directory";
+	public static final String list="List";
+	public static final String listFilesInSource="List files in source";
+	public static final String listFilesInDestination="List files in destination";
+	public static final String terminateProgram="Terminate program";
 	
 	public Message() {
 		this.noneMessage="none";

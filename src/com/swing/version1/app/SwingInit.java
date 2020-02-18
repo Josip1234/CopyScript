@@ -13,13 +13,22 @@ import com.cmd.concept.messages.Message;
 public class SwingInit implements CopyInterface {
 
 		private JFrame frame;
+		
 		private JMenuBar menuBar;
+		
 		private JMenu fileOperations;
+		private JMenu directoryOperations;
+		private JMenu openLastDirectories;
+		
 		private JMenuItem copyFile;
 		private JMenuItem moveFile;
 		private JMenuItem chooseFile;
 		private JMenuItem deleteFile;
 		private JMenuItem createFile;
+		private JMenuItem defaultJson;
+		private JMenuItem openJsonFile;
+		private JMenuItem openSourceDirectories;
+		private JMenuItem openDestinationDirectory;
 		
 
 		
@@ -30,15 +39,43 @@ public class SwingInit implements CopyInterface {
 		public SwingInit() {
 			this.menuBar=new JMenuBar();
 			this.fileOperations=new JMenu(Message.fileOperations);
+			this.directoryOperations=new JMenu(Message.directoryOperations);
 			this.copyFile=new JMenuItem(Message.copyFile);
 			this.moveFile=new JMenuItem(Message.moveFile);
 			this.chooseFile=new JMenuItem(Message.chooseFile);
 			this.deleteFile=new JMenuItem(Message.deleteFile);
 			this.createFile=new JMenuItem(Message.createFile);
+			this.openLastDirectories=new JMenu(Message.openLastDirectories);
+			this.defaultJson=new JMenuItem(Message.defaultJson);
+			this.openJsonFile=new JMenuItem(Message.openJsonFile);
+			this.openSourceDirectories=new JMenuItem(Message.openSourceDirectory);
+			this.openDestinationDirectory=new JMenuItem(Message.openDestinationDirectory);
 			this.frame=initialize(this.frame);
 		}
 		
 		
+		
+		
+		
+		public JMenuItem getOpenDestinationDirectory() {
+			return openDestinationDirectory;
+		}
+
+		public JMenuItem getOpenSourceDirectories() {
+			return openSourceDirectories;
+		}
+
+		public JMenuItem getOpenJsonFile() {
+			return openJsonFile;
+		}
+
+		public JMenuItem getDefaultJson() {
+			return defaultJson;
+		}
+
+		public JMenu getDirectoryOperations() {
+			return directoryOperations;
+		}
 
 		public JMenuItem getDeleteFile() {
 			return deleteFile;
@@ -70,6 +107,17 @@ public class SwingInit implements CopyInterface {
 			getCreateFile().setEnabled(false);
 			getFileOperations().add(getCreateFile());
 			
+			getMenuBar().add(getDirectoryOperations());
+			getDirectoryOperations().add(getOpenLastDirectories());
+			
+			getOpenLastDirectories().add(getDefaultJson());
+			
+			getOpenLastDirectories().add(getOpenJsonFile());
+			
+			getDirectoryOperations().add(getOpenSourceDirectories());
+			
+			getDirectoryOperations().add(getOpenDestinationDirectory());
+			
 			return frame;
 			
 			
@@ -77,6 +125,10 @@ public class SwingInit implements CopyInterface {
 		}
 		
 		
+
+		public JMenu getOpenLastDirectories() {
+			return openLastDirectories;
+		}
 
 		public JMenuItem getCreateFile() {
 			return createFile;
@@ -124,26 +176,6 @@ public class SwingInit implements CopyInterface {
 		/***
 		 * 
 		 *     
-		
-		JMenu mnDirectoryOperations = new JMenu("Directory operations");
-		menuBar.add(mnDirectoryOperations);
-		
-		JMenu mntmOpenLastDirectories = new JMenu("Open last directories");
-		mnDirectoryOperations.add(mntmOpenLastDirectories);
-		
-		JMenuItem mntmDefaultJson = new JMenuItem("Default json");
-		mntmOpenLastDirectories.add(mntmDefaultJson);
-		
-		JMenuItem mntmOpenJsonFile = new JMenuItem("Open json file");
-		mntmOpenLastDirectories.add(mntmOpenJsonFile);
-		
-	
-		
-		JMenuItem mntmOpenDirectories = new JMenuItem("Open source directory");
-		mnDirectoryOperations.add(mntmOpenDirectories);
-		
-		JMenuItem mntmOpenDestinationDirectory = new JMenuItem("Open destination directory");
-		mnDirectoryOperations.add(mntmOpenDestinationDirectory);
 		
 		JMenu mnList = new JMenu("List");
 		menuBar.add(mnList);
