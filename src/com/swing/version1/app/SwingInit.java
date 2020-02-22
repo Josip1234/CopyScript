@@ -23,6 +23,7 @@ public class SwingInit implements CopyInterface {
 		private JMenu openLastDirectories;
 		private JMenu list;
 		private JMenu terminateProgram;
+		private JMenu newSession;
 		
 		private JMenuItem copyFile;
 		private JMenuItem moveFile;
@@ -60,6 +61,7 @@ public class SwingInit implements CopyInterface {
 			this.listFilesInSource=new JMenuItem(Message.listFilesInSource);
 			this.listFilesInDestination=new JMenuItem(Message.listFilesInDestination);
 			this.terminateProgram=new JMenu(Message.terminateProgram);
+			this.newSession=new JMenu(Message.newSession);
 			this.frame=initialize(this.frame);
 		}
 		
@@ -69,6 +71,10 @@ public class SwingInit implements CopyInterface {
 		
 		
 		
+		public JMenu getNewSession() {
+			return newSession;
+		}
+
 		public JMenu getTerminateProgram() {
 			return terminateProgram;
 		}
@@ -161,6 +167,8 @@ public class SwingInit implements CopyInterface {
 			
 			getMenuBar().add(getTerminateProgram());
 			
+			getMenuBar().add(getNewSession());
+			
 			return frame;
 			
 			
@@ -228,8 +236,8 @@ public class SwingInit implements CopyInterface {
 					getCreateFile().setEnabled(true);
 					getListFilesInSource().setEnabled(true);
 					getListFilesInDestination().setEnabled(true);
-					getOpenSourceDirectories().setEnabled(true);
-					getOpenDestinationDirectory().setEnabled(true);
+					getOpenSourceDirectories().setEnabled(false);
+					getOpenDestinationDirectory().setEnabled(false);
 					
 					
 				}
@@ -296,6 +304,7 @@ public class SwingInit implements CopyInterface {
 					getDeleteFile().setEnabled(true);
 					getCreateFile().setEnabled(true);
 					getListFilesInSource().setEnabled(true);
+					getListFilesInDestination().setEnabled(true);
 					getOpenLastDirectories().setEnabled(true);
 					
 					

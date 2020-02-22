@@ -36,6 +36,7 @@ public class Message {
 	public static final String listFilesInSource="List files in source";
 	public static final String listFilesInDestination="List files in destination";
 	public static final String terminateProgram="Terminate program";
+	public static final String newSession="New session";
 	
 	public Message() {
 		this.noneMessage="none";
