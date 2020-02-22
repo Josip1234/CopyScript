@@ -19,6 +19,8 @@ public class SwingInit implements CopyInterface {
 		private JMenu fileOperations;
 		private JMenu directoryOperations;
 		private JMenu openLastDirectories;
+		private JMenu list;
+		private JMenu terminateProgram;
 		
 		private JMenuItem copyFile;
 		private JMenuItem moveFile;
@@ -29,6 +31,8 @@ public class SwingInit implements CopyInterface {
 		private JMenuItem openJsonFile;
 		private JMenuItem openSourceDirectories;
 		private JMenuItem openDestinationDirectory;
+		private JMenuItem listFilesInSource;
+		private JMenuItem listFilesInDestination;
 		
 
 		
@@ -50,6 +54,10 @@ public class SwingInit implements CopyInterface {
 			this.openJsonFile=new JMenuItem(Message.openJsonFile);
 			this.openSourceDirectories=new JMenuItem(Message.openSourceDirectory);
 			this.openDestinationDirectory=new JMenuItem(Message.openDestinationDirectory);
+			this.list=new JMenu(Message.list);
+			this.listFilesInSource=new JMenuItem(Message.listFilesInSource);
+			this.listFilesInDestination=new JMenuItem(Message.listFilesInDestination);
+			this.terminateProgram=new JMenu(Message.terminateProgram);
 			this.frame=initialize(this.frame);
 		}
 		
@@ -57,6 +65,24 @@ public class SwingInit implements CopyInterface {
 		
 		
 		
+		
+		
+		public JMenu getTerminateProgram() {
+			return terminateProgram;
+		}
+
+		public JMenuItem getListFilesInDestination() {
+			return listFilesInDestination;
+		}
+
+		public JMenuItem getListFilesInSource() {
+			return listFilesInSource;
+		}
+
+		public JMenu getList() {
+			return list;
+		}
+
 		public JMenuItem getOpenDestinationDirectory() {
 			return openDestinationDirectory;
 		}
@@ -118,6 +144,16 @@ public class SwingInit implements CopyInterface {
 			
 			getDirectoryOperations().add(getOpenDestinationDirectory());
 			
+			getMenuBar().add(getList());
+			
+			getListFilesInSource().setEnabled(false);
+			getList().add(getListFilesInSource());
+			
+			getListFilesInDestination().setEnabled(false);
+			getList().add(getListFilesInDestination());
+			
+			getMenuBar().add(getTerminateProgram());
+			
 			return frame;
 			
 			
@@ -176,21 +212,7 @@ public class SwingInit implements CopyInterface {
 		/***
 		 * 
 		 *     
-		
-		JMenu mnList = new JMenu("List");
-		menuBar.add(mnList);
-		
-		JMenuItem mntmListFilesIn = new JMenuItem("List files in source");
-		mntmListFilesIn.setEnabled(false);
-		mnList.add(mntmListFilesIn);
-		
-		JMenuItem mntmListFilesIn_1 = new JMenuItem("List files in destination");
-		mntmListFilesIn_1.setEnabled(false);
-		mnList.add(mntmListFilesIn_1);
-		
-		JMenu mnTerminateProgram = new JMenu("Terminate program");
-		menuBar.add(mnTerminateProgram);
-		
+	
 		mntmOpenJsonFile.addActionListener(new ActionListener() {
 			
 			@Override
