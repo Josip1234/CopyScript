@@ -1,19 +1,29 @@
 package com.swing.version1.app;
 
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.SystemColor;
 import java.awt.Window.Type;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 
 import com.cmd.concept.messages.Message;
 
 public class SwingInit implements CopyInterface {
-
+	
+	    private JPanel jpanel;
+	    private JButton chooseSource;
+	    
 		private JFrame frame;
 		
 		private JMenuBar menuBar;
@@ -39,6 +49,11 @@ public class SwingInit implements CopyInterface {
 		
 
 		
+		
+		public JButton getChooseSource() {
+			return chooseSource;
+		}
+
 		public JMenuItem getMoveFile() {
 			return moveFile;
 		}
@@ -62,6 +77,8 @@ public class SwingInit implements CopyInterface {
 			this.listFilesInDestination=new JMenuItem(Message.listFilesInDestination);
 			this.terminateProgram=new JMenu(Message.terminateProgram);
 			this.newSession=new JMenu(Message.newSession);
+			this.jpanel=new JPanel();
+			this.chooseSource=new JButton(Message.openSourceDirectory);
 			this.frame=initialize(this.frame);
 		}
 		
@@ -71,6 +88,10 @@ public class SwingInit implements CopyInterface {
 		
 		
 		
+		public JPanel getJpanel() {
+			return jpanel;
+		}
+
 		public JMenu getNewSession() {
 			return newSession;
 		}
@@ -285,6 +306,28 @@ public class SwingInit implements CopyInterface {
 					getListFilesInDestination().setEnabled(false);
 					getOpenLastDirectories().setEnabled(false);
 					
+			
+					
+					getJpanel().setBounds(0,0,574,84);
+					getJpanel().setBackground(SystemColor.text);
+					getFrame().getContentPane().add(getJpanel());
+					
+					getChooseSource().setFont(new Font("Tahoma", Font.PLAIN, 12));
+					getChooseSource().setBounds(0,0,100,100);
+					
+					getChooseSource().addActionListener(new ActionListener() {
+						
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							FileChooser fileChooser=new FileChooser();
+							fileChooser.init();
+							
+						}
+					});
+					
+				getJpanel().setLayout(new GridLayout(0,2,10,15));
+				getJpanel().add(getChooseSource());
+					
 					
 				}
 			});
@@ -313,8 +356,20 @@ public class SwingInit implements CopyInterface {
 			});
 			
 		}
+
+		@Override
+		public void init() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public String returnSource() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
-		
+	
 	
 		
 

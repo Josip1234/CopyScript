@@ -3,7 +3,7 @@ package com.swing.version1.app;
 import javax.swing.JFrame;
 import javax.swing.JMenuItem;
 
-public interface CopyInterface {
+public interface CopyInterface extends ChooserInterface {
 JFrame initialize(JFrame frame);
 void run();
 void openJsonFile(JMenuItem jsonFile);
