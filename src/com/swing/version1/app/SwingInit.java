@@ -2,6 +2,8 @@ package com.swing.version1.app;
 
 import java.awt.EventQueue;
 import java.awt.Window.Type;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -137,12 +139,17 @@ public class SwingInit implements CopyInterface {
 			getDirectoryOperations().add(getOpenLastDirectories());
 			
 			getOpenLastDirectories().add(getDefaultJson());
+			openDefaultJson(getDefaultJson());
+			
 			
 			getOpenLastDirectories().add(getOpenJsonFile());
+			openJsonFile(getOpenJsonFile());
 			
 			getDirectoryOperations().add(getOpenSourceDirectories());
+			openSourceDirectory(getOpenSourceDirectories());
 			
 			getDirectoryOperations().add(getOpenDestinationDirectory());
+			openDestinationDirectory(getOpenDestinationDirectory());
 			
 			getMenuBar().add(getList());
 			
@@ -207,94 +214,100 @@ public class SwingInit implements CopyInterface {
 			});
 			
 		}
-	
-		
-		/***
-		 * 
-		 *     
-	
-		mntmOpenJsonFile.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-			   System.out.println(e.getActionCommand());
-			   System.out.println(mntmCopyFile.getActionCommand());
-			   mntmCopyFile.setEnabled(true);
-			   mntmMoveFile.setEnabled(true);
-			   mntmChooseFile.setEnabled(true);
-			   mntmDeleteFile.setEnabled(true);
-			   mntmCreateNewFile.setEnabled(true);
-			   mntmListFilesIn.setEnabled(true);
-			   mntmListFilesIn_1.setEnabled(true);
-			   mntmOpenDirectories.setEnabled(false);
-			   mntmOpenDestinationDirectory.setEnabled(false);
-			   
-				
-			}
-		});
-		
-		mntmDefaultJson.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-			   System.out.println(e.getActionCommand());
-			   System.out.println(mntmCopyFile.getActionCommand());
-			   mntmCopyFile.setEnabled(true);
-			   mntmMoveFile.setEnabled(true);
-			   mntmChooseFile.setEnabled(true);
-			   mntmDeleteFile.setEnabled(true);
-			   mntmCreateNewFile.setEnabled(true);
-			   mntmListFilesIn.setEnabled(true);
-			   mntmListFilesIn_1.setEnabled(true);
-			   mntmOpenDirectories.setEnabled(false);
-			   mntmOpenDestinationDirectory.setEnabled(false);
-				
-			}
-		});
-		
-	mntmOpenDirectories.addActionListener(new ActionListener() {
-		
+
 		@Override
-		public void actionPerformed(ActionEvent e) {
-			mntmListFilesIn.setEnabled(true);
-			mntmChooseFile.setEnabled(true);
-			
-			  mntmCopyFile.setEnabled(false);
-			   mntmMoveFile.setEnabled(false);
-			   mntmDeleteFile.setEnabled(false);
-			   mntmCreateNewFile.setEnabled(false);
-			   mntmListFilesIn_1.setEnabled(false);
-			   
-			   mntmOpenLastDirectories.setEnabled(false);
+		public void openJsonFile(JMenuItem jsonFile) {
+			jsonFile.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					getCopyFile().setEnabled(true);
+					getMoveFile().setEnabled(true);
+					getChooseFile().setEnabled(true);
+					getDeleteFile().setEnabled(true);
+					getCreateFile().setEnabled(true);
+					getListFilesInSource().setEnabled(true);
+					getListFilesInDestination().setEnabled(true);
+					getOpenSourceDirectories().setEnabled(true);
+					getOpenDestinationDirectory().setEnabled(true);
+					
+					
+				}
+			});
 			
 		}
-	});
-		mntmOpenDestinationDirectory.addActionListener(new ActionListener() {
+
+		@Override
+		public void openDefaultJson(JMenuItem defaultJson) {
+			defaultJson.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					getCopyFile().setEnabled(true);
+					getMoveFile().setEnabled(true);
+					getChooseFile().setEnabled(true);
+					getDeleteFile().setEnabled(true);
+					getCreateFile().setEnabled(true);
+					getListFilesInSource().setEnabled(true);
+					getListFilesInDestination().setEnabled(true);
+					getOpenSourceDirectories().setEnabled(false);
+					getOpenDestinationDirectory().setEnabled(false);
+					
+					
+				}
+			});
+		
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				mntmListFilesIn.setEnabled(false);
-				mntmChooseFile.setEnabled(false);
-				
-				  mntmCopyFile.setEnabled(true);
-				   mntmMoveFile.setEnabled(true);
-				   mntmDeleteFile.setEnabled(true);
-				   mntmCreateNewFile.setEnabled(true);
-				   mntmListFilesIn_1.setEnabled(true);
-				   
-				   mntmOpenLastDirectories.setEnabled(false);
-				
-			}
-		});
+			
+			
 		}
+
+		@Override
+		public void openSourceDirectory(JMenuItem source) {
+			source.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					getListFilesInSource().setEnabled(true);
+					getChooseFile().setEnabled(true);
+					getCopyFile().setEnabled(false);
+					getMoveFile().setEnabled(false);
+					getDeleteFile().setEnabled(false);
+					getCreateFile().setEnabled(false);
+					getListFilesInDestination().setEnabled(false);
+					getOpenLastDirectories().setEnabled(false);
+					
+					
+				}
+			});
+			
+		}
+
+		@Override
+		public void openDestinationDirectory(JMenuItem destination) {
+			destination.addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					getListFilesInSource().setEnabled(false);
+					getChooseFile().setEnabled(false);
+					getCopyFile().setEnabled(true);
+					getMoveFile().setEnabled(true);
+					getDeleteFile().setEnabled(true);
+					getCreateFile().setEnabled(true);
+					getListFilesInSource().setEnabled(true);
+					getOpenLastDirectories().setEnabled(true);
+					
+					
+					
+				}
+			});
+			
+		}
+		
+		
 	
-};
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 */
+		
 
 	
 
