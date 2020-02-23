@@ -21,8 +21,8 @@ import com.cmd.concept.messages.Message;
 
 public class SwingInit implements CopyInterface {
 	
-	    private JPanel jpanel;
-	    private JButton chooseSource;
+	    
+	    
 	    
 		private JFrame frame;
 		
@@ -50,9 +50,7 @@ public class SwingInit implements CopyInterface {
 
 		
 		
-		public JButton getChooseSource() {
-			return chooseSource;
-		}
+		
 
 		public JMenuItem getMoveFile() {
 			return moveFile;
@@ -77,8 +75,8 @@ public class SwingInit implements CopyInterface {
 			this.listFilesInDestination=new JMenuItem(Message.listFilesInDestination);
 			this.terminateProgram=new JMenu(Message.terminateProgram);
 			this.newSession=new JMenu(Message.newSession);
-			this.jpanel=new JPanel();
-			this.chooseSource=new JButton(Message.openSourceDirectory);
+			
+			
 			this.frame=initialize(this.frame);
 		}
 		
@@ -87,10 +85,7 @@ public class SwingInit implements CopyInterface {
 		
 		
 		
-		
-		public JPanel getJpanel() {
-			return jpanel;
-		}
+	
 
 		public JMenu getNewSession() {
 			return newSession;
@@ -308,25 +303,18 @@ public class SwingInit implements CopyInterface {
 					
 			
 					
-					getJpanel().setBounds(0,0,574,84);
-					getJpanel().setBackground(SystemColor.text);
-					getFrame().getContentPane().add(getJpanel());
+					Jpanel panel=new Jpanel();
+					panel.init();
 					
-					getChooseSource().setFont(new Font("Tahoma", Font.PLAIN, 12));
-					getChooseSource().setBounds(0,0,100,100);
+					getFrame().getContentPane().add(panel.getJpanel());
 					
-					getChooseSource().addActionListener(new ActionListener() {
-						
-						@Override
-						public void actionPerformed(ActionEvent e) {
-							FileChooser fileChooser=new FileChooser();
-							fileChooser.init();
-							
-						}
-					});
+					Jbutton chooseSource=new Jbutton();
+					chooseSource.init();
+					getFrame().getContentPane().add(chooseSource.getChooseSource());
+				
+				
 					
-				getJpanel().setLayout(new GridLayout(0,2,10,15));
-				getJpanel().add(getChooseSource());
+				
 					
 					
 				}
