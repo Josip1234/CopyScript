@@ -30,18 +30,36 @@ public class Jbutton implements JButtonInterface {
 	public void init() {
 		getChooseSource().setFont(new Font("Tahoma", Font.PLAIN, 12));
 		getChooseSource().setBounds(0,0,100,100);
+		
+			
+		
+		
+	}
+
+
+
+	@Override
+	public void applyActionListener() {
+		
 		getChooseSource().addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				FileChooser fileChooser=new FileChooser();
 				fileChooser.init();
-			
+				System.out.println(fileChooser.returnSource());
+				
 				
 				
 			}
 		});
+	
+	}
+
+
+
+
 		
 	}
 
-}
+

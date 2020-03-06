@@ -311,6 +311,7 @@ public class SwingInit implements CopyInterface {
 					Jbutton chooseSource=new Jbutton();
 					chooseSource.init();
 					getFrame().getContentPane().add(chooseSource.getChooseSource());
+					chooseSource.applyActionListener();
 				
 				
 					
@@ -355,6 +356,12 @@ public class SwingInit implements CopyInterface {
 		public String returnSource() {
 			// TODO Auto-generated method stub
 			return null;
+		}
+
+		@Override
+		public void applyActionListener() {
+			// TODO Auto-generated method stub
+			
 		}
 		
 	

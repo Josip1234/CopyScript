@@ -45,6 +45,7 @@ public class FileChooser implements ChooserInterface {
 		if(returnValue==JFileChooser.APPROVE_OPTION) {
 			File selectedDir = getSourceChooser().getSelectedFile();
 			directory=selectedDir.toString();
+			
 		}
 		return directory;
 	}
