@@ -38,6 +38,7 @@ public class Message {
 	public static final String terminateProgram="Terminate program";
 	public static final String newSession="New session";
 	public static final String openDirectory="Open directory";
+	public static final String title="Copy script application";
 	
 	public Message() {
 		this.noneMessage="none";

@@ -23,7 +23,7 @@ public class SwingInit implements CopyInterface {
 	
 	    
 	    
-	    
+	    private Jpanel panel;
 		private JFrame frame;
 		
 		private JMenuBar menuBar;
@@ -76,13 +76,15 @@ public class SwingInit implements CopyInterface {
 			this.terminateProgram=new JMenu(Message.terminateProgram);
 			this.newSession=new JMenu(Message.newSession);
 			
-			
+			this.panel=new Jpanel();
 			this.frame=initialize(this.frame);
 		}
 		
 		
 		
-		
+		public Jpanel getJPanel() {
+			return panel;
+		}
 		
 		
 	
@@ -134,10 +136,11 @@ public class SwingInit implements CopyInterface {
 		@Override
 		public JFrame initialize(JFrame frame) {
 			frame=new JFrame();
-			frame.setTitle("Copy Script");
+			frame.setTitle(Message.title);
 			frame.setType(Type.POPUP);
-			frame.setBounds(100,100,450,300);
+			frame.setBounds(200,200,600,200);
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.getContentPane().add(getJPanel().getJpanel());
 			
 			frame.setJMenuBar(getMenuBar());
 			getMenuBar().add(getFileOperations());
