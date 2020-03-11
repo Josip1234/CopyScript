@@ -16,8 +16,18 @@ public static final String folderOperations="1.Folder operations";
 public static final String listOperations="2.List operations";
 public static final String mainFolderOperations="Main folder operations";
 public static final String chooseSubmenuItem="Choose submenu item";
-public static final String chooseDirectoryLocation="Choose directory operations";
-public static final String chooseDirectoryForFileCopy="Choose directory where file will be copied:";
+public static final String chooseDirectoryLocation="1.Choose directory operations";
+public static final String chooseDirectoryForFileCopy="2.Choose directory where file will be copied";
+public static final String chosenMapFolder="Map folder has been chosen.";
+public static final String choosenMapForFileCopy="Map where files will be copied has been chosen.";
+public static final String wrongNumberChoice="Wrong number choice.";
+public static final String listOfFilesInFolder="List of files in folder";
+public static final String chooseAList="Choose a list:";
+public static final String listForSelection="1.List for file selection";
+public static final String executeFiles="2.Execute files";
+public static final String choosenFiles="You have chosen these files:";
+public static final String openingFile="Opening file...";
+
 
 
 }

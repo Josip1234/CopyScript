@@ -15,85 +15,95 @@ public class Main {
 		String mainFolderOperations=Message.mainFolderOperations;
 		String chooseSubmenuItem=Message.chooseSubmenuItem;
 		String directoryOperations=Message.chooseDirectoryLocation+"\n"+Message.chooseDirectoryForFileCopy;
+		String chosenMapFolder=Message.chosenMapFolder;
+		String chosenMapForFileCopy=Message.choosenMapForFileCopy;
+		String wrongNumberChoice=Message.wrongNumberChoice;
+		String listOfFilesInFolder=Message.listOfFilesInFolder;
+		String chooseAList=Message.chooseAList;
+		String listForSelection=Message.listForSelection;
+		String executeFiles=Message.executeFiles;
+		String chosenFiles=Message.choosenFiles;
+		String openingFile=Message.openingFile;
 		
 		System.out.println(mainFolder);
 		System.out.println(menuItem);
 		System.out.println(operations);
 		
 		int key=0;
-		key=scanner.nextInt();
-		
+		/***
+		 * 
+		 * "resource leak" implies that some system resource (usually memory) is being lost or wasted needlessly. 
+		 * Usually this will impact you when you start getting OutOfMemoryErrors 
+		 * thrown during the normal operation of your program.
+		 * As others have said, you need to call 'close' on IO classes.
+		 * This ensures that your Scanner is always closed, guaranteeing proper resource cleanup
+		 * 
+		 * 
+		 */
+		try {
+			key = scanner.nextInt();
+		} finally {
+			scanner.close();
+		}
 		switch (key) {
 		case 1:
 			System.out.println(mainFolderOperations);
 			System.out.println(chooseSubmenuItem);
 			System.out.println(directoryOperations);
-			
-			break;
-
-		default:
-			break;
-		}
-		
-		/**
-		 * 
-		 *
-	 
-	      
-	      switch (key) {
-		case 1:
-			
-			
 			scanner=new Scanner(System.in);
-			key=scanner.nextInt();
-			switch (key) {
-			   case 1:
-				System.out.println("Map folder is chosen.");
-				break;
-			
-			   case 2:
-				System.out.println("Map where files will be copied has been chosen.");
-				break;
-				
-
-			    default:
-				   System.out.println("Wrong number choice.");
-				  break;
+			try {
+				key = scanner.nextInt();
+			} finally {
+				scanner.close();
 			}
-			break;
-			
-		case 2:
-			System.out.println("List of files in folders");
-			System.out.println("Choose a list:");
-			System.out.println("1.List for file selection\n2.Execute files");
-			key=scanner.nextInt();
 			switch (key) {
 			case 1:
-				System.out.println("You have chosen these files:");
+				System.out.println(chosenMapFolder);
+		
+				break;
+			case 2:
+				System.out.println(chosenMapForFileCopy);
+	
+				break;
+
+			default:
+				System.out.println(wrongNumberChoice);
+		
+				break;
+			}
+			
+			break;
+		case 2:
+			System.out.println(listOfFilesInFolder);
+			System.out.println(chooseAList);
+			System.out.println(listForSelection+"\n"+executeFiles);
+			try {
+				key = scanner.nextInt();
+			} finally {
+				scanner.close();
+			}
+			switch (key) {
+			case 1:
+				System.out.println(chosenFiles);
 				break;
 				
 			case 2:
-			    System.out.println("Opening file...");	
+				System.out.println(openingFile);
 				break;
-			
 
 			default:
 				break;
 			}
+	
 			break;
-		
-			
-		
-
+     
 		default:
-			System.out.println("You picked the wrong numbers");
+			System.out.println(wrongNumberChoice);
+	
 			break;
 		}
-	      
-		 * 
-		 * 
-		 * 
-		 */
+		
+   scanner.close();
 
 	}
 
