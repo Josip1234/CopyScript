@@ -9,26 +9,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner scanner=new Scanner(System.in);
-		String mainFolder=Message.mainFolders;
-		String menuItem=Message.menuItem;
+		
 		String operations=Message.folderOperations+"\n"+Message.listOperations+"\n";
-		String mainFolderOperations=Message.mainFolderOperations;
-		String chooseSubmenuItem=Message.chooseSubmenuItem;
 		String directoryOperations=Message.chooseDirectoryLocation+"\n"+Message.chooseDirectoryForFileCopy;
-		String chosenMapFolder=Message.chosenMapFolder;
-		String chosenMapForFileCopy=Message.choosenMapForFileCopy;
-		String wrongNumberChoice=Message.wrongNumberChoice;
-		String listOfFilesInFolder=Message.listOfFilesInFolder;
-		String chooseAList=Message.chooseAList;
 		String listForSelection=Message.listForSelection;
 		String executeFiles=Message.executeFiles;
-		String chosenFiles=Message.choosenFiles;
-		String openingFile=Message.openingFile;
-		
-		System.out.println(mainFolder);
-		System.out.println(menuItem);
+		System.out.println(Message.mainFolders);
+		System.out.println(Message.menuItem);
 		System.out.println(operations);
-		
+	
 		int key=0;
 		/***
 		 * 
@@ -39,18 +28,19 @@ public class Main {
 		 * This ensures that your Scanner is always closed, guaranteeing proper resource cleanup
 		 * 
 		 * 
-		 */
+		 *
 		try {
 			key = scanner.nextInt();
 		} finally {
 			scanner.close();
-		}
+		}*/
+		key = scanner.nextInt();
 		switch (key) {
 		case 1:
-			System.out.println(mainFolderOperations);
-			System.out.println(chooseSubmenuItem);
+			System.out.println(Message.mainFolderOperations);
+			System.out.println(Message.chooseSubmenuItem);
 			System.out.println(directoryOperations);
-			scanner=new Scanner(System.in);
+			
 			try {
 				key = scanner.nextInt();
 			} finally {
@@ -58,24 +48,24 @@ public class Main {
 			}
 			switch (key) {
 			case 1:
-				System.out.println(chosenMapFolder);
+				System.out.println(Message.chosenMapFolder);
 		
 				break;
 			case 2:
-				System.out.println(chosenMapForFileCopy);
+				System.out.println(Message.choosenMapForFileCopy);
 	
 				break;
 
 			default:
-				System.out.println(wrongNumberChoice);
+				System.out.println(Message.wrongNumberChoice);
 		
 				break;
 			}
 			
 			break;
 		case 2:
-			System.out.println(listOfFilesInFolder);
-			System.out.println(chooseAList);
+			System.out.println(Message.listOfFilesInFolder);
+			System.out.println(Message.chooseAList);
 			System.out.println(listForSelection+"\n"+executeFiles);
 			try {
 				key = scanner.nextInt();
@@ -84,11 +74,11 @@ public class Main {
 			}
 			switch (key) {
 			case 1:
-				System.out.println(chosenFiles);
+				System.out.println(Message.choosenFiles);
 				break;
 				
 			case 2:
-				System.out.println(openingFile);
+				System.out.println(Message.openingFile);
 				break;
 
 			default:
@@ -98,12 +88,12 @@ public class Main {
 			break;
      
 		default:
-			System.out.println(wrongNumberChoice);
+			System.out.println(Message.wrongNumberChoice);
 	
 			break;
 		}
 		
-   scanner.close();
+ 
 
 	}
 
