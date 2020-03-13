@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.copy.script"},{"l":"com.copy.script.console.app"},{"l":"com.copy.script.console.input"},{"l":"com.copy.script.enums"},{"l":"com.copy.script.messages"}]

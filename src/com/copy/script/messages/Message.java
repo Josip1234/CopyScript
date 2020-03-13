@@ -27,6 +27,9 @@ public static final String listForSelection="1.List for file selection";
 public static final String executeFiles="2.Execute files";
 public static final String choosenFiles="You have chosen these files:";
 public static final String openingFile="Opening file...";
+public static final String operations=Message.folderOperations+"\n"+Message.listOperations+"\n";
+public static final String directoryOperations=Message.chooseDirectoryLocation+"\n"+Message.chooseDirectoryForFileCopy;
+public static final String listForSelect=listForSelection+"\n"+executeFiles;
 
 
 
