@@ -30,6 +30,8 @@ public static final String openingFile="Opening file...";
 public static final String operations=Message.folderOperations+"\n"+Message.listOperations+"\n";
 public static final String directoryOperations=Message.chooseDirectoryLocation+"\n"+Message.chooseDirectoryForFileCopy;
 public static final String listForSelect=listForSelection+"\n"+executeFiles;
+public static final String chooseDestinationMap="Choose destination folder:";
+public static String chosenDestinationFolder=" destination folder is chosen.";
 
 
 

@@ -31,21 +31,32 @@ public class Main {
 	KeyboardInput input=new KeyboardInput();
 	int key=0;
 	System.out.println(Message.menuItem);
+	key=input.integerInput();
+	
+	switch (key) {
+	case 1:
+		System.out.println(Message.chosenMapFolder);
+	    input.setStringPointer();
+	    mainMap.setFolderName("");
+	    System.out.println(Message.chooseDestinationMap);
+	    mainMap.setFolderName(input.stringInput());
+	    System.out.println(mainMap.getFolderName()+Message.chosenDestinationFolder);
+		break;
+		
+	case 2:
+		
+		break;
+		
+	case 3: 
+		
+		break;
+
+	default:
+		break;
+	}
 		
  /***
   *
-	      
-@ -23,15 +37,25 @@ public class CMDConceptApp {
-			key=scanner.nextInt();
-			switch (key) {
-			   case 1:
-				System.out.println("Map folder is chosen.");
-				scanner.nextLine();
-			    mainMap="";
-				System.out.println("Choose map location:");
-				mainMap=scanner.nextLine();
-				System.out.println(mainMap + " map folder is chosen.");
-				break;
 			
 			   case 2:
 				System.out.println("Map where files will be copied has been chosen.");
