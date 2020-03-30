@@ -32,6 +32,8 @@ public static final String directoryOperations=Message.chooseDirectoryLocation+"
 public static final String listForSelect=listForSelection+"\n"+executeFiles;
 public static final String chooseDestinationMap="Choose destination folder:";
 public static String chosenDestinationFolder=" destination folder is chosen.";
+public static final String mapFilesWillBeCopied=" map files will be copied.";
+public static final String addedToDeletionList="Added to deletion list.";
 
 
 
