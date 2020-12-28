@@ -38,5 +38,12 @@ public class Message {
 	 * @since 28.12.2020. 14:06
 	 */
 	public static final String invalidChoice="Invalid choice";
+	/**
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 28.12.2020. 21:42
+	 */
+	public static final String howManyTvShows="How many tv shows?";
+	
 
 }

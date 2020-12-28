@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class KeyboardInput {
 public Scanner scanner;
 public String lang="";
+public Integer tv=0;
 
 /**
  * @author Korisnik
@@ -25,6 +26,16 @@ public String insertString() {
 	scanner.close();
 	return lang;
 }
-
+/**
+ * @author Korisnik
+ * @since 28.12.2020. 21:48
+ * @return inputed integer from the user
+ */
+public Integer insertInteger() {
+	scanner=new Scanner(System.in);
+	tv=scanner.nextInt();
+	scanner.close();
+	return tv;
+}
 
 }
