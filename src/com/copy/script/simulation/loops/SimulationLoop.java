@@ -16,10 +16,9 @@ public class SimulationLoop {
 	 * @since 28.12.2020. 13:36
 	 * @param numberOfTimeLoop
 	 */
-	void simulateOpenningDesktopApplication(int numberOfTimeLoop){
-		System.out.println(Message.openingApplication);
+	public void simulateOpenningDesktopApplication(int numberOfTimeLoop){
 		for (int i = 0; i < numberOfTimeLoop; i++) {
-			
+			System.out.println(Message.openingApplication);
 		}
 		System.out.println(Message.applicationIsOpen);
 	}
