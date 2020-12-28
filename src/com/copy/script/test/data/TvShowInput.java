@@ -2,6 +2,10 @@ package com.copy.script.test.data;
 
 import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.messages.Message;
+import com.copy.script.parsing.classes.TvShow;
+import java.util.Map;
+
+import java.util.List;
 
 /***
  * 
@@ -22,4 +26,19 @@ public class TvShowInput {
 		howMany=input.insertInteger();
 		return howMany;
 	}
+
+	/**
+	 * @author Korisnik
+	 * @since 28.12.2020. 22:00
+	 * @return list of test data of testpojo class
+	 * @param howMany how many data
+	 * @param map map of tv shows, integer as key
+	 * @return list of testpojo class objects as list
+	 */
+	public List addToList(Integer howMany,Map<Integer, TvShow> map){
+		return null;
+		
+		
+	}
+	
 }
