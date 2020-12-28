@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"com.copy.script.console.input","l":"KeyboardInput"},{"p":"com.copy.script","l":"Main"},{"p":"com.copy.script.enums","l":"MenuItems"},{"p":"com.copy.script.messages","l":"Message"},{"p":"com.copy.script.console.app","l":"V1"}]
