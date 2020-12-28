@@ -1,5 +1,6 @@
 package com.copy.script.main;
 
+import com.copy.script.menus.LanguageMenu;
 import com.copy.script.simulation.loops.SimulationLoop;
 
 /**
@@ -12,9 +13,12 @@ import com.copy.script.simulation.loops.SimulationLoop;
 public class Main {
 
 	public static void main(String[] args) {
-		int numberOfTimes = 100000;
+		int numberOfTimes = 100;
+		String chosenLaguage="";
 		SimulationLoop loop = new SimulationLoop();
 		loop.simulateOpenningDesktopApplication(numberOfTimes);
+		LanguageMenu languageMenu = new LanguageMenu();
+		chosenLaguage=languageMenu.chooseLanguage();
 
 	}
 
