@@ -4,7 +4,7 @@ import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.messages.Message;
 import com.copy.script.parsing.classes.TvShow;
 import java.util.Map;
-
+import java.util.HashMap;
 import java.util.List;
 
 /***
@@ -39,6 +39,25 @@ public class TvShowInput {
 		return null;
 		
 		
+	}
+	/**
+	 * @author Korisnik
+	 * @since 29.12.2020. 10:13
+	 * @param howMany how many maps will be created
+	 * @return map of tv shows
+	 */
+	public Map addtvShowsToTheMap(Integer howMany) {
+		Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
+		return map;
+	}
+	/***
+	 * @author Korisnik
+	 * @since 29.12.2020. 10:14
+	 * @return tv show object with generated fake data
+	 */
+	public TvShow generateFakeData() {
+		TvShow show = null;
+		return show;
 	}
 	
 }
