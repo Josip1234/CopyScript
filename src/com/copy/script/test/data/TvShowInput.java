@@ -56,12 +56,11 @@ public class TvShowInput {
 	public List addToList(Integer howManyMapsIntoLists,Integer howManyShows,Map<Integer, TvShow> map){
 		List<TestPojo> testPojos = new ArrayList<TestPojo>();
 		for (int i = 0; i < howManyMapsIntoLists; i++) {
-			for (int j = 0; j < howManyShows; j++) {
-				
-			}
+			map=addtvShowsToTheMap(howManyShows);
+			testPojos.add(new TestPojo(i, map));
 			
 		}
-		return null;
+		return testPojos;
 		
 		
 	}
@@ -71,7 +70,7 @@ public class TvShowInput {
 	 * @param howMany how many maps will be created
 	 * @return map of tv shows
 	 */
-	public Map addtvShowsToTheMap(Integer howMany) {
+	public Map<Integer,TvShow> addtvShowsToTheMap(Integer howMany) {
 		Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
 		for (int i = 0; i < howMany; i++) {
 			TvShow show= generateFakeData();
