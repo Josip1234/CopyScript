@@ -6,6 +6,7 @@ import com.copy.script.parsing.classes.TvShow;
 import com.github.javafaker.Faker;
 
 import java.util.Map;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -53,7 +54,13 @@ public class TvShowInput {
 	 * @return list of testpojo class objects as list, one list will have multiple maps with multiple data
 	 */
 	public List addToList(Integer howManyMapsIntoLists,Integer howManyShows,Map<Integer, TvShow> map){
-		
+		List<TestPojo> testPojos = new ArrayList<TestPojo>();
+		for (int i = 0; i < howManyMapsIntoLists; i++) {
+			for (int j = 0; j < howManyShows; j++) {
+				
+			}
+			
+		}
 		return null;
 		
 		
