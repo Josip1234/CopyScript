@@ -45,5 +45,11 @@ public class Message {
 	 */
 	public static final String howManyTvShows="How many tv shows?";
 	
+	/**
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 29.12.2020. 11:03
+	 */
+	public static final String howManyLists="How many maps into the list do you want to have?";
 
 }
