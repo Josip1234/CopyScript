@@ -23,7 +23,7 @@ public Integer tv=0;
 public String insertString() {
 	scanner= new Scanner(System.in);
 	lang=scanner.nextLine();
-	scanner.close();
+	
 	return lang;
 }
 /**
@@ -34,8 +34,16 @@ public String insertString() {
 public Integer insertInteger() {
 	scanner=new Scanner(System.in);
 	tv=scanner.nextInt();
-	scanner.close();
+	
 	return tv;
+}
+/**
+ * @author Korisnik
+ * @since 29.12.2020. 11:26
+ * @param scanner which scanner do you want to close
+ */
+public void closeInput(Scanner scanner) {
+	scanner.close();
 }
 
 }
