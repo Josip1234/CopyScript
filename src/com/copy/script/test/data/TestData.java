@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.copy.script.activation.main.functions.Function;
 import com.copy.script.messages.Message;
 import com.copy.script.output.PrintOutput;
 import com.copy.script.parsing.classes.TvShow;
@@ -19,18 +20,8 @@ import com.copy.script.parsing.classes.TvShow;
 public class TestData {
 
 	public static void main(String[] args) {
-		Integer howMany=0;
-		Integer howManyMaps=0;
-		Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
-		List<TestPojo> testPojos = new ArrayList<TestPojo>();
-		TvShowInput input = new TvShowInput();
-		howMany=input.howManyInput();
-		System.out.println(Message.youHaveChosen + howMany.toString()); 
-		howManyMaps = input.howManyMapsIntoLists();
-		System.out.println(Message.youHaveChosen+howManyMaps.toString());
-		testPojos=input.addToList(howManyMaps, howMany, map);
-		PrintOutput output = new PrintOutput();
-		output.PrintTestPojoListAndContentOfTheList(testPojos);
+		Function function = new Function();
+		function.activateTestData();
 
 	}
 

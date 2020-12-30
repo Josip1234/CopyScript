@@ -2,6 +2,7 @@ package com.copy.script.output;
 
 import java.util.List;
 
+import com.copy.script.folders.Folder;
 import com.copy.script.test.data.TestPojo;
 
 /**
@@ -24,4 +25,16 @@ public void PrintTestPojoListAndContentOfTheList(List<TestPojo> testPojos) {
 		System.out.println(testPojo.toString());
 	}
 }
+
+/**
+ * @author Korisnik
+ * @since 30.12.2020. 10:22
+ * @param folder print source and destination folders as json array
+ */
+public void printSourceDestinationDirectory(Folder folder) {
+	System.out.println(folder.toString());
+}
+
+
+
 }
