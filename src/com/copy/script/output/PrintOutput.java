@@ -21,7 +21,7 @@ public class PrintOutput {
 	 */
 public void PrintTestPojoListAndContentOfTheList(List<TestPojo> testPojos) {
 	for (TestPojo testPojo : testPojos) {
-		System.out.println(testPojo.getIdentity()+" "+testPojo.getShow());
+		System.out.println(testPojo.toString());
 	}
 }
 }

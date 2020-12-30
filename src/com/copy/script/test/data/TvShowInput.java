@@ -86,7 +86,7 @@ public class TvShowInput {
 	public TvShow generateFakeData() {
 		
 		Faker faker = new Faker();
-		TvShow show = new TvShow(faker.number().randomDigit(), faker.file().fileName(), faker.internet().url(), faker.funnyName().toString(), faker.file().extension(), faker.bool().bool());
+		TvShow show = new TvShow(faker.number().randomDigit(), faker.file().fileName(), faker.internet().url(), faker.lorem().word(), faker.file().extension(), faker.bool().bool());
 		return show;
 	}
 	

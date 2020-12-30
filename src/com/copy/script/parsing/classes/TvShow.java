@@ -139,13 +139,18 @@ public class TvShow {
 
 	@Override
 	public String toString() {
-		return "TvShow [id=" + id + ", showName=" + showName + ", path=" + path + ", folder=" + folder
-				+ ", fileExtension=" + fileExtension + ", isWatched=" + isWatched + ", getId()=" + getId()
-				+ ", getShowName()=" + getShowName() + ", getPath()=" + getPath() + ", getFolder()=" + getFolder()
-				+ ", getFileExtension()=" + getFileExtension() + ", isWatched()=" + isWatched() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return '"'+"TvShow"+'"'+":"+"{"+'"'+"id"+'"'+":"+id+","+'"'+"showName"+'"'+":"+'"'+showName+'"'+","
+				+'"'+"path"+'"'+":"+'"'+path+'"'+","
+				+'"'+"folder"+'"'+":"+'"'+folder+'"'+","
+				+'"'+"fileExtension"+'"'+":"+'"'+fileExtension+'"'+","
+				+'"'+"isWatched"+'"'+":"+'"'+isWatched+'"'+"}";
 	}
 	
+	
+	
+	
+
+
 	
 	
 	

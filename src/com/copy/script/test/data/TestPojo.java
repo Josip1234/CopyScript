@@ -61,10 +61,10 @@ public class TestPojo {
 
 @Override
 public String toString() {
-	return "TestPojo [identity=" + identity + ", show=" + show + ", getIdentity()=" + getIdentity() + ", getShow()="
-			+ getShow() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-			+ super.toString() + "]";
+	return '"'+"TestPojo"+'"'+":"+"{"+'"'+"identity"+'"'+":"+identity+","+'"'+"show"+'"'+":"+'"'+show.toString()+"}";
 }
+
+
 	
 	
 	
