@@ -1,11 +1,5 @@
 package com.copy.script.main;
 
-import com.copy.script.activation.main.functions.Function;
-import com.copy.script.folders.Folder;
-import com.copy.script.menus.LanguageMenu;
-import com.copy.script.output.PrintOutput;
-import com.copy.script.simulation.loops.SimulationLoop;
-
 /**
  * 
  * @author Korisnik
@@ -16,9 +10,7 @@ import com.copy.script.simulation.loops.SimulationLoop;
 public class Main {
 	
 	public static void main(String[] args) {
-	    Function function = new Function();
-	    function.activateLanguageMenu();
-	    function.activateSetSourceDestinationFolders();
+	
 	
 		
 

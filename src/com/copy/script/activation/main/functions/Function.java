@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.copy.script.folders.Folder;
 import com.copy.script.menus.LanguageMenu;
+import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
 import com.copy.script.output.PrintOutput;
 import com.copy.script.parsing.classes.TvShow;
@@ -48,6 +49,10 @@ public void activateSetSourceDestinationFolders() {
 	output.printSourceDestinationDirectory(folder);
 }
 
+/**
+ * @author Korisnik
+ * @since unknown
+ */
 public void activateTestData() {
 	Integer howMany=0;
 	Integer howManyMaps=0;
@@ -62,6 +67,13 @@ public void activateTestData() {
 	PrintOutput output = new PrintOutput();
 	output.PrintTestPojoListAndContentOfTheList(testPojos);
 }
-	
+/**
+ * @author Korisnik
+ * @since 31.12.2020. 13:46
+ */
+public void chooseFromSubMenu() {
+	   SubMenu subMenu = new SubMenu();
+	   subMenu.chooseFromSubMenu();
+}
 	
 }

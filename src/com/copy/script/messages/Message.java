@@ -51,5 +51,29 @@ public class Message {
 	 * @since 29.12.2020. 11:03
 	 */
 	public static final String howManyLists="How many maps into the list do you want to have?";
-
+	/**
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 31.12.2020. 13:20
+	 */
+	public static final String chooseSourceDirectory="1.Choose source directory:";
+	/**
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 31.12.2020. 13:21
+	 */
+	public static final String chooseDestinationDirectory="2.Choose destinationDirectory:";
+	/***
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 31.12.2020. 13:30
+	 */
+	public static final String chooseSomethingFromMenu="Choose from the menu:";
+	/***
+	 * @author Korisnik
+	 * @category Messages
+	 * @since 31.12.2020. 13:37
+	 *
+	 */
+    public static final String enterNumber="Enter one number:";
 }
