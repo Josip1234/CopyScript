@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
+import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.menus.LanguageMenu;
 import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
@@ -74,6 +76,14 @@ public void activateTestData() {
 public void chooseFromSubMenu() {
 	   SubMenu subMenu = new SubMenu();
 	   subMenu.chooseFromSubMenu();
+}
+/***
+ * @author Korisnik
+ * @since 1.1.2021. 14:16
+ */
+public void activateListFiles() {
+	FileFunctions fileFunctions = new FileFunctions();
+	fileFunctions.doYouWantToListFilesFromFolders();
 }
 	
 }

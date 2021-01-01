@@ -14,6 +14,7 @@ public class KeyboardInput {
 public Scanner scanner;
 public String lang="";
 public Integer tv=0;
+public boolean yesOrNo=false;
 
 /**
  * @author Korisnik
@@ -37,6 +38,19 @@ public Integer insertInteger() {
 	
 	return tv;
 }
+
+/***
+ * @author Korisnik
+ * @since 1.1.2021. 14:06
+ * @return boolean value from user input
+ */
+public boolean insertBoolean() {
+	scanner=new Scanner(System.in);
+	yesOrNo = scanner.nextBoolean();
+	return yesOrNo;
+}
+
+
 /**
  * @author Korisnik
  * @since 29.12.2020. 11:26

@@ -76,4 +76,16 @@ public class Message {
 	 *
 	 */
     public static final String enterNumber="Enter one number:";
+    /**
+     * @author Korisnik
+     * @category Messages
+     * @since 1.1.2021. 14:01
+     */
+    public static final String listFiles = "Do you want to list files?";
+    /**
+     * @author Korisnik
+     * @category Messages
+     * @since 1.1.2021. 14:30
+     */
+    public static final String insertBoolean="Only true or false input";
 }
