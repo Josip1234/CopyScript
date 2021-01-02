@@ -12,7 +12,14 @@ import com.copy.script.activation.main.functions.Function;
 public class Main {
 	
 	public static void main(String[] args) {
+		/***
+		 * First activate menu for languages.
+		 */
 	    Function function = new Function();
+	    function.activateLanguageMenu();
+	    /***
+	     * Second activate main menu
+	     */
 	    function.activateMainMenu();
 	
 
