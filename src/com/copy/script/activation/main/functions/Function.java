@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
-import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.menus.LanguageMenu;
 import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
@@ -37,6 +36,7 @@ public void activateLanguageMenu() {
 	loop.simulateOpenningDesktopApplication(numberOfTimes);
 	LanguageMenu languageMenu = new LanguageMenu();
 	chosenLaguage=languageMenu.chooseLanguage();
+	System.out.println(Message.closingLanguageMenu+Message.with+chosenLaguage);
 }
 
 /**
@@ -55,6 +55,7 @@ public void activateSetSourceDestinationFolders() {
  * @author Korisnik
  * @since unknown
  */
+
 public void activateTestData() {
 	Integer howMany=0;
 	Integer howManyMaps=0;

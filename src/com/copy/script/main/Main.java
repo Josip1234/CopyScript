@@ -1,6 +1,6 @@
 package com.copy.script.main;
 
-import com.copy.script.activation.main.functions.Function;
+
 
 /**
  * 

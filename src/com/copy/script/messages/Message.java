@@ -88,4 +88,16 @@ public class Message {
      * @since 1.1.2021. 14:30
      */
     public static final String insertBoolean="Only true or false input";
+    /**
+     * @author Korisnik
+     *  @category Messages
+     *  @since 2.1.2020. 12:24
+     */
+    public static final String closingLanguageMenu = "Closing language menu...";
+    /**
+     * @author Korisnik
+     * @category Messages
+     * @since 2.1.2021. 12:26
+     */
+    public static final String with="With";
 }

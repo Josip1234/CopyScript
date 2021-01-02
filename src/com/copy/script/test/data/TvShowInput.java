@@ -8,7 +8,6 @@ import com.github.javafaker.Faker;
 import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 /***
@@ -53,7 +52,7 @@ public class TvShowInput {
 	 * @param map map of tv shows, integer as key
 	 * @return list of testpojo class objects as list, one list will have multiple maps with multiple data
 	 */
-	public List addToList(Integer howManyMapsIntoLists,Integer howManyShows,Map<Integer, TvShow> map){
+	public List<TestPojo> addToList(Integer howManyMapsIntoLists,Integer howManyShows,Map<Integer, TvShow> map){
 		List<TestPojo> testPojos = new ArrayList<TestPojo>();
 		for (int i = 0; i < howManyMapsIntoLists; i++) {
 			map=addtvShowsToTheMap(howManyShows);
