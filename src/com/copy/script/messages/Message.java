@@ -100,4 +100,17 @@ public class Message {
      * @since 2.1.2021. 12:26
      */
     public static final String with="With";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 2.1.2021. 12:46
+     */
+    public static final String listOfFiles="2. List files";
+    
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 2.1.2021. 12:47
+     */
+    public static final String chooseFolder="1. Choose folders";
 }

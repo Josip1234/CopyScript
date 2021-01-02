@@ -8,6 +8,7 @@ import java.util.Map;
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
 import com.copy.script.menus.LanguageMenu;
+import com.copy.script.menus.MainMenu;
 import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
 import com.copy.script.output.PrintOutput;
@@ -86,5 +87,14 @@ public void activateListFiles() {
 	FileFunctions fileFunctions = new FileFunctions();
 	fileFunctions.doYouWantToListFilesFromFolders();
 }
+/**
+ * @author Korisnik
+ * @since 2.1.2021. 12:55
+ */
+public void activateMainMenu() {
+	MainMenu mainmenu=new MainMenu();
+	mainmenu.chooseFromMainMenu();
+}
+
 	
 }

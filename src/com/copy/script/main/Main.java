@@ -1,6 +1,6 @@
 package com.copy.script.main;
 
-
+import com.copy.script.activation.main.functions.Function;
 
 /**
  * 
@@ -12,7 +12,8 @@ package com.copy.script.main;
 public class Main {
 	
 	public static void main(String[] args) {
-	    
+	    Function function = new Function();
+	    function.activateMainMenu();
 	
 
 	}
