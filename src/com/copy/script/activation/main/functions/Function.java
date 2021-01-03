@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
+import com.copy.script.menus.ChosenMenuItem;
 import com.copy.script.menus.LanguageMenu;
 import com.copy.script.menus.MainMenu;
 import com.copy.script.menus.SubMenu;
@@ -37,7 +38,7 @@ public void activateLanguageMenu() {
 	loop.simulateOpenningDesktopApplication(numberOfTimes);
 	LanguageMenu languageMenu = new LanguageMenu();
 	chosenLaguage=languageMenu.chooseLanguage();
-	System.out.println(Message.closingLanguageMenu+Message.with+chosenLaguage);
+	System.out.println(Message.closingLanguageMenu+Message.with+Message.spacing+chosenLaguage);
 }
 
 /**
@@ -92,9 +93,32 @@ public void activateListFiles() {
  * @since 2.1.2021. 12:55
  */
 public void activateMainMenu() {
+	String chosen="";
 	MainMenu mainmenu=new MainMenu();
-	mainmenu.chooseFromMainMenu();
+	chosen=mainmenu.chooseFromMainMenu();
+	if(chosen.contentEquals(ChosenMenuItem.Folders.toString())) {
+		chooseFromSubMenu();
+		
+	}else if(chosen.contentEquals(ChosenMenuItem.Lists.toString())) {
+		activateListFiles();
+	}else {
+		System.out.println(Message.invalidChoice);
+	}
 }
-
+/***
+ *@author Korisnik
+ *@since 3.1.2021.15:51 
+ */
+public void menuSequence() {
+	/***
+	 * First activate menu for languages.
+	 */
+   
+    activateLanguageMenu();
+    /***
+     * Second activate main menu
+     */
+    activateMainMenu();
+}
 	
 }

@@ -113,4 +113,10 @@ public class Message {
      * @since 2.1.2021. 12:47
      */
     public static final String chooseFolder="1. Choose folders";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 3.1.2021. 15:48
+     */
+    public static final String spacing=" ";
 }
