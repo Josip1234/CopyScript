@@ -61,7 +61,10 @@ public class TestPojo {
 
 @Override
 public String toString() {
-	return "{\"TestPojo\": {\"identity\":" + identity + ", \"show\":" + show + "}}";
+	String output="{\"TestPojo\": {\"identity\":" + identity + ", \"show\":" + show + "}}";
+	String temp=output.replaceAll("(\\d=){1}", "");
+	output=temp;
+	return output;
 }
 
 
