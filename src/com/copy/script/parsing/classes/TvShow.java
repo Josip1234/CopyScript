@@ -1,10 +1,13 @@
 package com.copy.script.parsing.classes;
+
+import java.util.Date;
+
 /**
  * 
  * @author Korisnik
  * @category ParsingClass
- * @version 1.0
- * @since 28.12.2020. 21:12
+ * @version 2.0
+ * @since 10.01.2021. 08:46
  */
 public class TvShow {
 	private Integer id;
@@ -13,19 +16,21 @@ public class TvShow {
 	private String folder;
 	private String fileExtension;
 	private boolean isWatched;
+	private Date dateOfChange;
 	
 	/**
 	 * @author Korisnik
 	 * @category Constructor
-	 * @since 28.12.2020. 21:20
+	 * @since 10.01.2021. 08:54
 	 * @param id - id of the file in folder
 	 * @param showName - name of the show or simply name of the file
 	 * @param path - file path
 	 * @param folder - folder name in where file is
 	 * @param fileExtension - file extension
 	 * @param isWatched - is this tv show watched
+	 * @param date - date when data of file has been changed
 	 */
-	public TvShow(Integer id, String showName, String path, String folder, String fileExtension, boolean isWatched) {
+	public TvShow(Integer id, String showName, String path, String folder, String fileExtension, boolean isWatched,Date date) {
 		
 		this.id = id;
 		this.showName = showName;
@@ -33,6 +38,7 @@ public class TvShow {
 		this.folder = folder;
 		this.fileExtension = fileExtension;
 		this.isWatched = isWatched;
+		this.dateOfChange = date; 
 	}
 
 	/**
@@ -136,6 +142,26 @@ public class TvShow {
 	public void setWatched(boolean isWatched) {
 		this.isWatched = isWatched;
 	}
+	
+	
+	
+    /***
+     * @author Korisnik
+     * @since 10.01.2021. 08:55
+     * @return date of change
+     */
+	public Date getDateOfChange() {
+		return dateOfChange;
+	}
+
+	/***
+	 * @author Korisnik
+	 * @since 10.01.2021. 08:55
+	 * @param dateOfChange - set new date 
+	 */
+	public void setDateOfChange(Date dateOfChange) {
+		this.dateOfChange = dateOfChange;
+	}
 
 	@Override
 	public String toString() {
@@ -143,7 +169,7 @@ public class TvShow {
 				+'"'+"path"+'"'+":"+'"'+path+'"'+","
 				+'"'+"folder"+'"'+":"+'"'+folder+'"'+","
 				+'"'+"fileExtension"+'"'+":"+'"'+fileExtension+'"'+","
-				+'"'+"isWatched"+'"'+":"+'"'+isWatched+'"'+"}";
+				+'"'+"isWatched"+'"'+":"+'"'+isWatched+'"'+"date"+'"'+":"+'"'+dateOfChange+'"'+"}";
 	}
 	
 	

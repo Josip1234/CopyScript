@@ -7,14 +7,16 @@ import com.github.javafaker.Faker;
 
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
 /***
  * 
  * @author Korisnik
- *@version 1.0
- *@since 28.12.2020. 21:45
+ *@version 2.0
+ *@since 10.01.2021. 09:00
  * */
 public class TvShowInput {
    /***
@@ -79,13 +81,17 @@ public class TvShowInput {
 	}
 	/***
 	 * @author Korisnik
-	 * @since 29.12.2020. 10:14
+	 * @since 10.01.2022. 09:03
 	 * @return tv show object with generated fake data
 	 */
 	public TvShow generateFakeData() {
-		
-		Faker faker = new Faker();
-		TvShow show = new TvShow(faker.number().randomDigit(), faker.file().fileName(), faker.internet().url(), faker.lorem().word(), faker.file().extension(), faker.bool().bool());
+		Calendar from = Calendar.getInstance();
+		from.add(Calendar.YEAR, -1);
+	    Calendar to = Calendar.getInstance();
+	    Date from2 = from.getTime();
+	    Date to2=to.getTime();
+	    Faker faker = new Faker();
+		TvShow show = new TvShow(faker.number().randomDigit(), faker.file().fileName(), faker.internet().url(), faker.lorem().word(), faker.file().extension(), faker.bool().bool(),faker.date().between(from2, to2));
 		return show;
 	}
 	
