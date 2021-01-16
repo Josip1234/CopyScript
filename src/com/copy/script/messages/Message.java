@@ -119,4 +119,40 @@ public class Message {
      * @since 3.1.2021. 15:48
      */
     public static final String spacing=" ";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 11:47
+     */
+    public static final String chooseAlgorithms="3."+OneWordMessages.Algorithms.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 11:50
+     */
+    public static final String sortingChoice="1."+OneWordMessages.Sorting.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 11:52
+     */
+    public static final String searchingChoice="2."+OneWordMessages.Searching.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 11:58
+     */
+    public static final String searchByName="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.name.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021 11:59
+     */
+    public static final String searchByDate="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.date.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 12:01
+     */
+    public static final String searchByExtension="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.extension.toString();
 }

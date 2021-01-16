@@ -42,9 +42,10 @@ public void printSourceDestinationDirectory(Folder folder) {
 }
 /***
  * @author Korisnik
- * @since 10.1.2021. 10:35
+ * @since 16.1.2021. 11:35
  * @param input - recieve "dirty" string 
  * @return clean json output for print
+ * @deprecated
  */
 public String returnCleanJsonArray(String input) {
 	
