@@ -14,7 +14,7 @@ import com.copy.script.messages.Message;
 public class LanguageMenu {
 /**
  * @author Korisnik
- * @since 28.12.2020. 14:02
+ * @since 16.01.2021. 13:14
  * @return chosen language from user input
  */
 public String chooseLanguage() {
@@ -22,7 +22,7 @@ public String chooseLanguage() {
 	System.out.println(Message.chooseLanguage);
 	System.out.println(Language.DE+","+Language.EN+","+Language.HR);
 	KeyboardInput input=new KeyboardInput();
-	language=input.insertString();
+	language=input.insertString().toUpperCase();
 	if(isCorrectInput(language)==true) {
 		System.out.println(Message.youHaveChosen+language);
 	}else {

@@ -122,9 +122,9 @@ public class Message {
     /***
      * @author Korisnik
      * @category Messages
-     * @since 16.01.2021. 11:47
+     * @since 16.01.2021. 12:47
      */
-    public static final String chooseAlgorithms="3."+OneWordMessages.Algorithms.toString();
+    public static final String chooseAlgorithms=OneWordMessages.Choose+spacing+OneWordMessages.Algorithms.toString().toLowerCase();
     /***
      * @author Korisnik
      * @category Messages
@@ -142,17 +142,50 @@ public class Message {
      * @category Messages
      * @since 16.01.2021. 11:58
      */
-    public static final String searchByName="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.name.toString();
+    public static final String searchByName="1."+OneWordMessages.Search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.name.toString();
     /***
      * @author Korisnik
      * @category Messages
      * @since 16.01.2021 11:59
      */
-    public static final String searchByDate="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.date.toString();
+    public static final String searchByDate="2."+OneWordMessages.Search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.date.toString();
     /***
      * @author Korisnik
      * @category Messages
      * @since 16.01.2021. 12:01
      */
-    public static final String searchByExtension="1."+OneWordMessages.search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.extension.toString();
+    public static final String searchByExtension="3."+OneWordMessages.Search.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.extension.toString();
+    
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 12:23
+     */
+    public static final String sortByName="1."+OneWordMessages.Sort.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.name.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021 12:23
+     */
+    public static final String sortByDate="2."+OneWordMessages.Sort.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.date.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 12:24
+     */
+    public static final String sortByExtension="3."+OneWordMessages.Sort.toString()+spacing+OneWordMessages.files.toString()+spacing+OneWordMessages.by.toString()+spacing+OneWordMessages.extension.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 12:38
+     */
+    public static final String defaultValue="3."+OneWordMessages.defaultValue;
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 13:21
+     */
+    public static final String defaultListing="List will be default listed like in os.";
+    
+    
 }

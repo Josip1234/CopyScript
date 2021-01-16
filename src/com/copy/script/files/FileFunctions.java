@@ -1,6 +1,7 @@
 package com.copy.script.files;
 
 import com.copy.script.keyboard.input.KeyboardInput;
+import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
 
 
@@ -23,8 +24,19 @@ public class FileFunctions implements FileOperations{
 			System.out.println(Message.insertBoolean);
 			KeyboardInput input = new KeyboardInput();
 			try {
+				String chosen="";
 				yes = input.insertBoolean();
-				System.out.println(Message.youHaveChosen+yes);
+				if(yes==true) {
+					System.out.println(Message.youHaveChosen+yes);
+					SubMenu subMenu = new SubMenu();
+					chosen=subMenu.chooseHowToListFiles();
+					System.out.println(Message.youHaveChosen+chosen);
+				}else {
+					System.out.println(Message.youHaveChosen+yes);
+					
+				}
+				
+				
 			} catch (Exception e) {
 				System.out.println(Message.invalidChoice);
 			}
