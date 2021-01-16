@@ -186,6 +186,12 @@ public class Message {
      * @since 16.01.2021. 13:21
      */
     public static final String defaultListing="List will be default listed like in os.";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 16.01.2021. 17:41
+     */
+    public static final String defaultDateTimeFormat="dd.MM.yyyy. HH:MM:s";
     
     
 }

@@ -1,10 +1,15 @@
 package com.copy.script.output;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 //import java.util.regex.Matcher;
 //import java.util.regex.Pattern;
 
 import com.copy.script.folders.Folder;
+import com.copy.script.parsing.classes.TvShow;
 import com.copy.script.test.data.TestPojo;
 
 /**
@@ -72,5 +77,27 @@ public String returnCleanJsonArray(String input) {
 	//json=json.replaceAll("[\\d:](?=:\")", "\"identity\":"+0+",");
 	return json;
 }
+/***
+ * @author Korisnik
+ * @since 16.1.2021. 19:51
+ */
+public void printBySortingByName() {
+	  List<TvShow> tvShow = new ArrayList<TvShow>();
+	  tvShow.add(new TvShow(1, "myshow", "c:/user/desktop/", "myfolder", ".exe", true, new Date()));
+	  tvShow.add(new TvShow(2, "ayshow2", "c:/user/desktop/", "myfolder2", ".zip", true, new Date()));
+	  tvShow.add(new TvShow(3, "olyshow23", "c:/user/desktop/", "myfolder2", ".zip", true, new Date()));
+		Collections.sort(tvShow, new Comparator<TvShow>() {
 
+		    public int compare(TvShow a, TvShow b) {
+		        return a.getShowName().compareTo(b.getShowName());
+		    }
+
+
+		});
+		
+		for (TvShow tvShow2 : tvShow) {
+			System.out.println(tvShow2);
+		}
+		
+}
 }

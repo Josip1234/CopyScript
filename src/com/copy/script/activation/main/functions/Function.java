@@ -1,6 +1,9 @@
 package com.copy.script.activation.main.functions;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -119,6 +122,35 @@ public void menuSequence() {
      * Second activate main menu
      */
     activateMainMenu();
+}
+
+/***
+ * @author Korisnik
+ * @category DateTime
+ * @since 16.01.2021. 18:08
+ */
+public void formatDate() {
+	SimpleDateFormat format = new SimpleDateFormat(Message.defaultDateTimeFormat);
+	String dateString = format.format( new Date()   );
+	
+	try {
+		Date date = format.parse ( "16.01.2021. 18:04:16" );
+		String dt1=format.format(date);
+	    System.out.println(date);
+	    System.out.println(dt1);
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}   
+	
+}
+/***
+ * @author Korisnik
+ * @since 16.01.2021. 19:54
+ */
+public void printTestSorting() {
+    PrintOutput output = new PrintOutput();
+    output.printBySortingByName();
 }
 	
 }
