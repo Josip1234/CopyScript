@@ -1,16 +1,14 @@
 package com.copy.script.test.data;
 
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.messages.Message;
 import com.copy.script.parsing.classes.TvShow;
 import com.github.javafaker.Faker;
-
-import java.util.Map;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 
 /***
  * 

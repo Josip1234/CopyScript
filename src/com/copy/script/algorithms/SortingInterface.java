@@ -1,11 +1,6 @@
 package com.copy.script.algorithms;
 
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-import com.copy.script.parsing.classes.TvShow;
-import com.copy.script.test.data.TestPojo;
 
 /***
  * 

@@ -1,17 +1,13 @@
 package com.copy.script.output;
 
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 //import java.util.regex.Matcher;
 //import java.util.regex.Pattern;
 
 import com.copy.script.folders.Folder;
 import com.copy.script.parsing.classes.TvShow;
-import com.copy.script.test.data.TestPojo;
 
 /**
  * 

@@ -4,11 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import com.copy.script.conversion.MapToListConversion;
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
 import com.copy.script.menus.ChosenMenuItem;
@@ -20,7 +17,6 @@ import com.copy.script.messages.OneWordMessages;
 import com.copy.script.output.PrintOutput;
 import com.copy.script.parsing.classes.TvShow;
 import com.copy.script.simulation.loops.SimulationLoop;
-import com.copy.script.test.data.TestPojo;
 import com.copy.script.test.data.TvShowInput;
 
 /***
@@ -65,7 +61,6 @@ public void activateSetSourceDestinationFolders() {
 
 public List<TvShow> activateTestData() {
 	Integer howMany=0;
-	Integer howManyMaps=0;
 	List<TvShow> shows = new ArrayList<TvShow>();
 	TvShowInput input = new TvShowInput();
 	howMany=input.howManyInput();
@@ -131,7 +126,7 @@ public void menuSequence() {
  */
 public void formatDate() {
 	SimpleDateFormat format = new SimpleDateFormat(Message.defaultDateTimeFormat);
-	String dateString = format.format( new Date()   );
+	//String dateString = format.format( new Date()   );
 	
 	try {
 		Date date = format.parse ( "16.01.2021. 18:04:16" );

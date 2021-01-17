@@ -1,9 +1,5 @@
 package com.copy.script.test.data;
 
-import java.util.Map;
-
-import com.copy.script.parsing.classes.TvShow;
-
 /***
  * 
  * @author Korisnik
