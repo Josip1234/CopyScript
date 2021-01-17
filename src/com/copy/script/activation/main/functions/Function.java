@@ -16,6 +16,7 @@ import com.copy.script.menus.LanguageMenu;
 import com.copy.script.menus.MainMenu;
 import com.copy.script.menus.SubMenu;
 import com.copy.script.messages.Message;
+import com.copy.script.messages.OneWordMessages;
 import com.copy.script.output.PrintOutput;
 import com.copy.script.parsing.classes.TvShow;
 import com.copy.script.simulation.loops.SimulationLoop;
@@ -151,7 +152,12 @@ public void printTestSorting() {
 	List<TvShow> shows = new ArrayList<TvShow>();
     PrintOutput output = new PrintOutput();
     shows=activateTestData();
- 
+    System.out.println(OneWordMessages.Sorted);
+    output.printBySortingByDate(shows);
+    System.out.println(OneWordMessages.Sorted);
+    output.printBySortingByExtension(shows);
+    System.out.println(OneWordMessages.Sorted);
+    output.printBySortingByName(shows);
     
  
 }

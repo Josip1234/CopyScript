@@ -31,6 +31,7 @@ public class TestData {
 	public static void main(String[] args) throws ParseException {
      Function function = new Function();
      function.printTestSorting();
+     
 		
 	}
 
