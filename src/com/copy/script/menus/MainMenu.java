@@ -1,5 +1,6 @@
 package com.copy.script.menus;
 
+import com.copy.script.activation.main.functions.Function;
 import com.copy.script.keyboard.input.KeyboardInput;
 import com.copy.script.messages.Message;
 
@@ -24,6 +25,7 @@ public class MainMenu {
 		System.out.println(Message.enterNumber);
 		System.out.println(Message.chooseFolder);
 		System.out.println(Message.listOfFiles);
+		System.out.println(Message.testData);
 		KeyboardInput key = new KeyboardInput();
 		input=key.insertInteger();
 		switch (input) {
@@ -35,6 +37,10 @@ public class MainMenu {
 		case 2:
 			chosen=ChosenMenuItem.Lists.toString();
 			System.out.println(Message.youHaveChosen+chosen);
+			break;
+		case 3:
+			 Function function = new Function();
+		     function.printTestSorting();     
 			break;
 
 		default:

@@ -192,6 +192,12 @@ public class Message {
      * @since 16.01.2021. 17:41
      */
     public static final String defaultDateTimeFormat="dd.MM.yyyy. HH:MM:s";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 17.01.2021. 18:31
+     */
+    public static final String testData="3. Activate"+spacing+OneWordMessages.Test.toString()+OneWordMessages.data.toString();
     
     
 }

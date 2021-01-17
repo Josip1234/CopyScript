@@ -9,6 +9,6 @@ package com.copy.script.messages;
  */
 public enum OneWordMessages {
 	Algorithms, Sorting, Searching, date, name, extension, Sort, Search,by, files, defaultValue,
-	Choose,Sorted, Found
+	Choose,Sorted, Found, Test, data
 
 }
