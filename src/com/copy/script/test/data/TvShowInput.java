@@ -36,49 +36,51 @@ public class TvShowInput {
 	 * @author Korisnik
 	 * @since 28.12.2020. 11:04
 	 * @return number of how much maps into the list do you want to have
+	 * @deprecated
 	 */
-	public Integer howManyMapsIntoLists() {
+	/*public Integer howManyMapsIntoLists() {
 		int howMany=0;
 		System.out.println(Message.howManyLists);
 		KeyboardInput input = new KeyboardInput();
 		howMany=input.insertInteger();
 		return howMany;
-	}
+	}*/
+	
 
 	/**
 	 * @author Korisnik
 	 * @since 28.12.2020. 22:00
 	 * @return list of test data of testpojo class
-	 * @param howMany how many data
-	 * @param howManyLists how many maps into the list do you want to have
 	 * @param map map of tv shows, integer as key
 	 * @return list of testpojo class objects as list, one list will have multiple maps with multiple data
+	 * 
 	 */
-	public List<TestPojo> addToList(Integer howManyMapsIntoLists,Integer howManyShows,Map<Integer, TvShow> map){
-		List<TestPojo> testPojos = new ArrayList<TestPojo>();
-		for (int i = 0; i < howManyMapsIntoLists; i++) {
-			map=addtvShowsToTheMap(howManyShows);
-			testPojos.add(new TestPojo(i, map));
+	public List<TvShow> addToList(Integer howManyShows){
+		List<TvShow> tvShow = new ArrayList<TvShow>();
+		for (int i = 0; i < howManyShows; i++) {
+		    TvShow show = generateFakeData();
+		    tvShow.add(show);
 			
 		}
-		return testPojos;
+		return tvShow;
 		
-		
+	
 	}
 	/**
 	 * @author Korisnik
 	 * @since 29.12.2020. 10:13
 	 * @param howMany how many maps will be created
 	 * @return map of tv shows
+	 * @deprecated
 	 */
-	public Map<Integer,TvShow> addtvShowsToTheMap(Integer howMany) {
+/*	public Map<Integer,TvShow> addtvShowsToTheMap(Integer howMany) {
 		Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
 		for (int i = 0; i < howMany; i++) {
 			TvShow show= generateFakeData();
 			map.put(i, show);
 		}
 		return map;
-	}
+	}*/
 	/***
 	 * @author Korisnik
 	 * @since 10.01.2022. 09:03

@@ -10,10 +10,11 @@ import com.copy.script.parsing.classes.TvShow;
  * @category TestData
  * @version 1.0
  * @since 28.12.2020. 21:34
+ * @deprecated
  */
 public class TestPojo {
-	private Integer identity;
-	private Map<Integer,TvShow> show;
+	//private Integer identity;
+	//private Map<Integer,TvShow> show;
 	
 	/**
 	 * @author Korisnik
@@ -21,44 +22,45 @@ public class TestPojo {
 	 * @param identity set new identity
 	 * @param show set new tv show object
 	 */
-	public TestPojo(Integer identity, Map<Integer,TvShow> show) {
+	/*public TestPojo(Integer identity, Map<Integer,TvShow> show) {
 		this.identity = identity;
 		this.show = show;
 	}
-
+*/
 	/***
 	 * @author Korisnik
 	 * @since 28.12.2020. 21:36
 	 * @return identity number
 	 */
-	public Integer getIdentity() {
+	/*public Integer getIdentity() {
 		return identity;
-	}
+	}*/
 /**
  *  @author Korisnik
  *  @since 28.12.2020. 21:36
  * @param identity set new identity number
  */
-	public void setIdentity(Integer identity) {
+	/*public void setIdentity(Integer identity) {
 		this.identity = identity;
-	}
+	}*/
 /**
  *  @author Korisnik
  *  @since 28.12.2020. 21:36
  * @return tv show
  */
-	public Map<Integer, TvShow> getShow() {
+	/*public Map<Integer, TvShow> getShow() {
 		return show;
-	}
+	}*/
 /***
  *  @author Korisnik
  *  @since 28.12.2020. 21:36
  * @param show set new tv show
  */
-	public void setShow(Map<Integer, TvShow> show) {
+	/*public void setShow(Map<Integer, TvShow> show) {
 		this.show = show;
 	}
-
+	*/
+/*
 @Override
 public String toString() {
 	String output="{\"TestPojo\": {\"identity\":" + identity + ", \"show\":" + show + "}}";
@@ -66,7 +68,7 @@ public String toString() {
 	output=temp;
 	return output;
 }
-
+*/
 
 	
 

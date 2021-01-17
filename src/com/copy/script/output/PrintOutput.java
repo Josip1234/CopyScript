@@ -1,6 +1,7 @@
 package com.copy.script.output;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -24,15 +25,15 @@ public class PrintOutput {
 
 	/**
 	 * @author Korisnik
-	 * @since 10.01.2021. 10:34
-	 * @param testPojos recieve list of test pojo vlass
+	 * @since 17.01.2021. 14:05
+	 * @param list of tv shows
 	 */
-public void PrintTestPojoListAndContentOfTheList(List<TestPojo> testPojos) {
+public void PrintTvShows(List<TvShow> shows) {
 	//String output="";
-	for (TestPojo testPojo : testPojos) {
+	for (TvShow tvShow : shows) {
 		//output=testPojo.toString();
 	     //output=returnCleanJsonArray(output);
-		System.out.println(testPojo.toString());
+		System.out.println(tvShow.toString());
 	}
 	
 }
@@ -81,11 +82,8 @@ public String returnCleanJsonArray(String input) {
  * @author Korisnik
  * @since 16.1.2021. 19:51
  */
-public void printBySortingByName() {
-	  List<TvShow> tvShow = new ArrayList<TvShow>();
-	  tvShow.add(new TvShow(1, "myshow", "c:/user/desktop/", "myfolder", ".exe", true, new Date()));
-	  tvShow.add(new TvShow(2, "ayshow2", "c:/user/desktop/", "myfolder2", ".zip", true, new Date()));
-	  tvShow.add(new TvShow(3, "olyshow23", "c:/user/desktop/", "myfolder2", ".zip", true, new Date()));
+public void printBySortingByName(List<TvShow> tvShow) {
+	 
 		Collections.sort(tvShow, new Comparator<TvShow>() {
 
 		    public int compare(TvShow a, TvShow b) {
@@ -100,4 +98,53 @@ public void printBySortingByName() {
 		}
 		
 }
+
+
+/***
+ * @author Korisnik
+ * @since 17.01.2021. 13:00
+ */
+public void printBySortingByExtension(List<TvShow> tvShow) {
+	
+
+		Collections.sort(tvShow, new Comparator<TvShow>() {
+
+		    public int compare(TvShow a, TvShow b) {
+		        return a.getFileExtension().compareTo(b.getFileExtension());
+		    }
+
+
+		});
+		
+		for (TvShow tvShow2 : tvShow) {
+			System.out.println(tvShow2);
+		}
+		
+}
+
+/***
+ * @author Korisnik
+ * @since 17.01.2021. 13:02
+ */
+public void printBySortingByDate(List<TvShow> tvShow) {
+
+		Collections.sort(tvShow, new Comparator<TvShow>() {
+
+		    public int compare(TvShow a, TvShow b) {
+		        return a.getDateOfChange().compareTo(b.getDateOfChange());
+		    }
+
+
+		});
+		
+		for (TvShow tvShow2 : tvShow) {
+			System.out.println(tvShow2);
+		}
+		
+}
+
+
+
+
+
 }

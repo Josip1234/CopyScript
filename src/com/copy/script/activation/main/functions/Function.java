@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.copy.script.conversion.MapToListConversion;
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
 import com.copy.script.menus.ChosenMenuItem;
@@ -58,22 +59,20 @@ public void activateSetSourceDestinationFolders() {
 
 /**
  * @author Korisnik
- * @since unknown
+ * @since 17.01.2021. 13:40
  */
 
-public void activateTestData() {
+public List<TvShow> activateTestData() {
 	Integer howMany=0;
 	Integer howManyMaps=0;
-	Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
-	List<TestPojo> testPojos = new ArrayList<TestPojo>();
+	List<TvShow> shows = new ArrayList<TvShow>();
 	TvShowInput input = new TvShowInput();
 	howMany=input.howManyInput();
 	System.out.println(Message.youHaveChosen + howMany.toString()); 
-	howManyMaps = input.howManyMapsIntoLists();
-	System.out.println(Message.youHaveChosen+howManyMaps.toString());
-	testPojos=input.addToList(howManyMaps, howMany, map);
+	shows=input.addToList(howMany);
 	PrintOutput output = new PrintOutput();
-	output.PrintTestPojoListAndContentOfTheList(testPojos);
+	output.PrintTvShows(shows);
+	return shows;
 }
 /**
  * @author Korisnik
@@ -149,8 +148,12 @@ public void formatDate() {
  * @since 16.01.2021. 19:54
  */
 public void printTestSorting() {
+	List<TvShow> shows = new ArrayList<TvShow>();
     PrintOutput output = new PrintOutput();
-    output.printBySortingByName();
+    shows=activateTestData();
+ 
+    
+ 
 }
 	
 }
