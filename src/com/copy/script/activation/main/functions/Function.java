@@ -100,7 +100,7 @@ public void activateMainMenu() {
 	}else if(chosen.contentEquals(ChosenMenuItem.Lists.toString())) {
 		activateListFiles();
 	}else {
-		System.out.println(Message.invalidChoice);
+		System.exit(0);
 	}
 }
 /***

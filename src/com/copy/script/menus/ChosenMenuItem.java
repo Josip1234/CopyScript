@@ -8,5 +8,5 @@ package com.copy.script.menus;
  *
  */
 public enum ChosenMenuItem {
-Folders, Lists
+Folders, Lists, TestData
 }

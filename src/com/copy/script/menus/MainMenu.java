@@ -39,6 +39,7 @@ public class MainMenu {
 			System.out.println(Message.youHaveChosen+chosen);
 			break;
 		case 3:
+			chosen = ChosenMenuItem.TestData.toString();
 			 Function function = new Function();
 		     function.printTestSorting();     
 			break;
