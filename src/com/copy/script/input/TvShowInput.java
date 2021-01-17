@@ -1,4 +1,4 @@
-package com.copy.script.test.data;
+package com.copy.script.input;
 
 import java.util.ArrayList;
 import java.util.Calendar;

@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.copy.script.files.FileFunctions;
 import com.copy.script.folders.Folder;
+import com.copy.script.input.TvShowInput;
 import com.copy.script.menus.ChosenMenuItem;
 import com.copy.script.menus.LanguageMenu;
 import com.copy.script.menus.MainMenu;
@@ -17,7 +18,6 @@ import com.copy.script.messages.OneWordMessages;
 import com.copy.script.output.PrintOutput;
 import com.copy.script.parsing.classes.TvShow;
 import com.copy.script.simulation.loops.SimulationLoop;
-import com.copy.script.test.data.TvShowInput;
 
 /***
  * 
