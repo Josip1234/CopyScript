@@ -165,9 +165,9 @@ public class TvShow {
 
 	@Override
 	public String toString() {
-		return "\"TvShow\" : {\"id\":" + id + ", \"showName\":" +'"' +showName + '"' +", \"path\":" +'"' + path +'"' + ", \"folder\":" +'"' + folder
+		return "{"+'"'+"TvShow"+'"'+':'+ "{\"id\":" + id + ", \"showName\":" +'"' +showName + '"' +", \"path\":" +'"' + path +'"' + ", \"folder\":" +'"' + folder
 				+'"' + ", \"fileExtension\":" + '"' +fileExtension +'"' + ", \"isWatched\":" + isWatched + ", \"dateOfChange\":" +'"' + dateOfChange
-				+ '"' +"}";
+				+ '"' +"}}";
 	}
 
 
