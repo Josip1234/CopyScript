@@ -14,6 +14,7 @@ import com.copy.script.messages.Message;
  */
 public class MainMenu {
 	/***
+	 * Choose from main menu one of the items provided.
 	 * @author Korisnik
 	 * @since 2.1.2021. 12:43
 	 * @return chosen main menu item

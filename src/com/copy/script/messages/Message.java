@@ -1,6 +1,6 @@
 package com.copy.script.messages;
 /**
- * 
+ * Messages for communication between user and user interface.
  * @author Korisnik
  * @category Messages
  * @version 1.0

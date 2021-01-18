@@ -10,7 +10,7 @@ import com.copy.script.folders.Folder;
 import com.copy.script.parsing.classes.TvShow;
 
 /**
- * 
+ * Class for printing input from user
  * @author Korisnik
  * @category Output
  * @version 1.0
@@ -20,21 +20,22 @@ import com.copy.script.parsing.classes.TvShow;
 public class PrintOutput {
 
 	/**
+	 * Print tv shows
 	 * @author Korisnik
 	 * @since 17.01.2021. 14:05
 	 * @param list of tv shows
 	 */
 public void PrintTvShows(List<TvShow> shows) {
-	//String output="";
+	
 	for (TvShow tvShow : shows) {
-		//output=testPojo.toString();
-	     //output=returnCleanJsonArray(output);
+
 		System.out.println(tvShow.toString());
 	}
 	
 }
 
 /**
+ * Print source or destination link from user input
  * @author Korisnik
  * @since 30.12.2020. 10:22
  * @param folder print source and destination folders as json array
@@ -42,39 +43,10 @@ public void PrintTvShows(List<TvShow> shows) {
 public void printSourceDestinationDirectory(Folder folder) {
 	System.out.println(folder.toString());
 }
+
+
 /***
- * @author Korisnik
- * @since 16.1.2021. 11:35
- * @param input - recieve "dirty" string 
- * @return clean json output for print
- * @deprecated
- */
-public String returnCleanJsonArray(String input) {
-	
-	//char equality='=';
-	String json="";
-	//char replace=' ';
-	//char[] characters = new char[] {};
-	//characters=input.toCharArray();
-	//replace = with :
-	/*for (int i = 0; i < characters.length; i++) {
-		if(characters[i]==equality) {
-			char temp= characters[i];
-			temp=':';
-			replace=temp;
-			json+=replace;
-		}else {
-			json+=characters[i];
-		}
-	}
-	Pattern p = Pattern.compile("(?<=,:{1})");
-     Matcher findString= p.matcher(json);
-    */
-    //regex replace [\d:](?=:") everything what starting with any digit and after that : is following
-	//json=json.replaceAll("[\\d:](?=:\")", "\"identity\":"+0+",");
-	return json;
-}
-/***
+ * Print list of tv shows sorted by name
  * @author Korisnik
  * @since 16.1.2021. 19:51
  */
@@ -97,6 +69,7 @@ public void printBySortingByName(List<TvShow> tvShow) {
 
 
 /***
+ * Print list of tv shows sorted by extension
  * @author Korisnik
  * @since 17.01.2021. 13:00
  */
@@ -119,6 +92,7 @@ public void printBySortingByExtension(List<TvShow> tvShow) {
 }
 
 /***
+ * Print list of tv shows sorted by date
  * @author Korisnik
  * @since 17.01.2021. 13:02
  */

@@ -18,6 +18,7 @@ import com.github.javafaker.Faker;
  * */
 public class TvShowInput {
    /***
+    * How many tv shows do you want to have in a list
     * @author Korisnik
     * @since 28.12.2020. 21:46
     * @return number of inputs to generate
@@ -30,27 +31,14 @@ public class TvShowInput {
 		return howMany;
 	}
 	
-	/**
-	 * @author Korisnik
-	 * @since 28.12.2020. 11:04
-	 * @return number of how much maps into the list do you want to have
-	 * @deprecated
-	 */
-	/*public Integer howManyMapsIntoLists() {
-		int howMany=0;
-		System.out.println(Message.howManyLists);
-		KeyboardInput input = new KeyboardInput();
-		howMany=input.insertInteger();
-		return howMany;
-	}*/
 	
 
 	/**
 	 * @author Korisnik
-	 * @since 28.12.2020. 22:00
-	 * @return list of test data of testpojo class
-	 * @param map map of tv shows, integer as key
-	 * @return list of testpojo class objects as list, one list will have multiple maps with multiple data
+	 * @since 18.01.2021. 18:54
+	 * @return list of test data of tvshow class
+	 * @param howManyShows how many shows do you want
+	 * @return list of tvshows
 	 * 
 	 */
 	public List<TvShow> addToList(Integer howManyShows){
@@ -64,22 +52,9 @@ public class TvShowInput {
 		
 	
 	}
-	/**
-	 * @author Korisnik
-	 * @since 29.12.2020. 10:13
-	 * @param howMany how many maps will be created
-	 * @return map of tv shows
-	 * @deprecated
-	 */
-/*	public Map<Integer,TvShow> addtvShowsToTheMap(Integer howMany) {
-		Map<Integer, TvShow> map = new HashMap<Integer,TvShow>();
-		for (int i = 0; i < howMany; i++) {
-			TvShow show= generateFakeData();
-			map.put(i, show);
-		}
-		return map;
-	}*/
+
 	/***
+	 * Function for generating fake data for the single object
 	 * @author Korisnik
 	 * @since 10.01.2022. 09:03
 	 * @return tv show object with generated fake data

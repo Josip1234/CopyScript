@@ -9,6 +9,7 @@ package com.copy.script.files;
  */
 public interface FileOperations {
 	/***
+	 * Function for printing files from folders.
 	 * @author Korisnik
 	 * @since 1.1.2021. 14:04
 	 */

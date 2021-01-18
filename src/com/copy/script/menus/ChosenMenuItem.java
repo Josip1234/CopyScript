@@ -1,6 +1,6 @@
 package com.copy.script.menus;
 /***
- * 
+ * For messages what is chosen from the user input
  * @author Korisnik
  * @category Menu
  * @version 1.0

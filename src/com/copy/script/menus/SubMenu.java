@@ -16,6 +16,7 @@ import com.copy.script.messages.OneWordMessages;
  */
 public class SubMenu {
 /**
+ * Choose source and destination directory
  * @author Korisnik
  * @since 31.12.2020. 13:24
  * @return chosen submenu items
@@ -47,7 +48,7 @@ public String chooseFromSubMenu() {
 	return chosen;
 }
 /***
- * 
+ * Choose algorithms for listing list of files of some folders.
  * @author Korisnik
  * @since 16.01.2021. 12:31
  * @return chosen submenu items

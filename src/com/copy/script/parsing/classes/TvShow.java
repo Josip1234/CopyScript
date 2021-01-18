@@ -3,7 +3,7 @@ package com.copy.script.parsing.classes;
 import java.util.Date;
 
 /**
- * 
+ * Class for parsing json tv show data or generating input tada, fake or real ones
  * @author Korisnik
  * @category ParsingClass
  * @version 2.0

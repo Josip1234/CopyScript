@@ -29,8 +29,10 @@ import com.copy.script.simulation.loops.SimulationLoop;
 public class Function {
 
 /**
+ * Activate language menu, before menu, simulate opening application.
  * @author Korisnik
  * @since 30.12.2020. 10:26	
+ * 
  */
 public void activateLanguageMenu() {
 	int numberOfTimes = 100;
@@ -43,8 +45,10 @@ public void activateLanguageMenu() {
 }
 
 /**
+ * Set new source and destination folders.
  * @author Korisnik
  * @since 30.12.2020. 10:27
+ * 
  */
 public void activateSetSourceDestinationFolders() {
 	Folder folder = new Folder();
@@ -55,8 +59,10 @@ public void activateSetSourceDestinationFolders() {
 }
 
 /**
+ * How many test data you want to have to test algorithms of the application
  * @author Korisnik
  * @since 17.01.2021. 13:40
+ * 
  */
 
 public List<TvShow> activateTestData() {
@@ -71,6 +77,7 @@ public List<TvShow> activateTestData() {
 	return shows;
 }
 /**
+ * Activate submenu.
  * @author Korisnik
  * @since 31.12.2020. 13:46
  */
@@ -79,6 +86,7 @@ public void chooseFromSubMenu() {
 	   subMenu.chooseFromSubMenu();
 }
 /***
+ * If you want to list files from directory, activate this function.
  * @author Korisnik
  * @since 16.01.2021. 12:28
  */
@@ -87,6 +95,7 @@ public void activateListFiles() {
 	fileFunctions.doYouWantToListFilesFromFolders();
 }
 /**
+ * Activate main menu.
  * @author Korisnik
  * @since 2.1.2021. 12:55
  */
@@ -104,6 +113,7 @@ public void activateMainMenu() {
 	}
 }
 /***
+ * Menu sequence for activating main menu and language menu.
  *@author Korisnik
  *@since 3.1.2021.15:51 
  */
@@ -120,6 +130,7 @@ public void menuSequence() {
 }
 
 /***
+ * Function for date formating
  * @author Korisnik
  * @category DateTime
  * @since 16.01.2021. 18:08
@@ -140,6 +151,7 @@ public void formatDate() {
 	
 }
 /***
+ * Test class for printing list of test data of tv shows sorted by date, name and date.
  * @author Korisnik
  * @since 16.01.2021. 19:54
  */

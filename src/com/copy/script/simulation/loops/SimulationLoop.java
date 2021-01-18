@@ -3,7 +3,7 @@ package com.copy.script.simulation.loops;
 import com.copy.script.messages.Message;
 
 /**
- * 
+ * Class for simulation
  * @author Korisnik
  * @category SimulationLoops
  * @version 1.0
@@ -11,6 +11,7 @@ import com.copy.script.messages.Message;
  */
 public class SimulationLoop {
 	/**
+	 * Simulate opening application
 	 * @author Korisnik
 	 * @category Functions
 	 * @since 28.12.2020. 13:36

@@ -12,6 +12,7 @@ public class Folder {
 	
 	
 	/***
+	 *
 	 * @author Korisnik
 	 * @since 30.12.2020. 10:17
 	 */

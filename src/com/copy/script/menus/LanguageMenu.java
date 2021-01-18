@@ -13,6 +13,7 @@ import com.copy.script.messages.Message;
  */
 public class LanguageMenu {
 /**
+ * Function for choosing language from the user input from keyboard
  * @author Korisnik
  * @since 16.01.2021. 13:14
  * @return chosen language from user input
@@ -33,6 +34,7 @@ public String chooseLanguage() {
 	return language;
 }
 /**
+ * Function for validating user input of the language
  * @author Korisnik
  * @since 28.12.2020. 14:19
  * @param input string value

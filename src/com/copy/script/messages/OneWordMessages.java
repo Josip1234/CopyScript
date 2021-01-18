@@ -1,6 +1,6 @@
 package com.copy.script.messages;
 /***
- * 
+ * Short messages, most of it used by message class.
  * @author Korisnik
  * @category Messages
  * @version 1.0
