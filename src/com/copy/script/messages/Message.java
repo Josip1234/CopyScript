@@ -198,6 +198,12 @@ public class Message {
      * @since 17.01.2021. 18:31
      */
     public static final String testData="3. Activate"+spacing+OneWordMessages.Test.toString()+OneWordMessages.data.toString();
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 08.03.2021. 20:33
+     */
+    public static final String enterWordToSearch="Enter what do you want to search:";
     
     
 }
