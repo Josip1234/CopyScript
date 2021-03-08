@@ -204,6 +204,24 @@ public class Message {
      * @since 08.03.2021. 20:33
      */
     public static final String enterWordToSearch="Enter what do you want to search:";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 08.03.2021. 20:43
+     */
+    public static final String enterDay="Enter day:";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 08.03.2021. 20:43
+     */
+    public static final String enterMonth = "Enter month";
+    /***
+     * @author Korisnik
+     * @category Messages
+     * @since 08.03.2021. 20:43
+     */
+    public static final String enterYear = "Enter year:";
     
     
 }
