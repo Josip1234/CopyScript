@@ -222,6 +222,12 @@ public class Message {
      * @since 08.03.2021. 20:43
      */
     public static final String enterYear = "Enter year:";
+    /***
+     * @author Korisnik
+     * @since 09.03.2021. 21:12
+     * 
+     */
+    public static final String enterExtension="Enter what extension do you want to search:";
     
     
 }

@@ -50,7 +50,7 @@ public String chooseFromSubMenu() {
 /***
  * Choose algorithms for listing list of files of some folders.
  * @author Korisnik
- * @since 08.03.2021. 20:50
+ * @since 09.03.2021. 21:12
  * @return chosen submenu items
  * @return chosen item
  */
@@ -133,9 +133,13 @@ public String chooseHowToListFiles() {
 			System.out.println(Message.youHaveChosen+" "+ dateToSearch);
 			break;
 		case 3:
+			String extension=".";
+			System.out.println(Message.enterExtension);
+			KeyboardInput input4 = new KeyboardInput();
+			extension+=input4.insertString();
 			choice3=OneWordMessages.Found.toString();
 			chosen=choice3;
-			System.out.println(chosen);
+			System.out.println(Message.youHaveChosen+" "+extension);
 			break;
 		default:
 			System.out.println(Message.invalidChoice);
