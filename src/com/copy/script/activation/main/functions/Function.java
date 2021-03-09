@@ -22,7 +22,6 @@ import com.copy.script.simulation.loops.SimulationLoop;
 /***
  * 
  * @author Korisnik
- * @category MainFunctions
  * @version 1.0
  * @since 30.12.2020. 10:24
  */
@@ -132,7 +131,7 @@ public void menuSequence() {
 /***
  * Function for date formating
  * @author Korisnik
- * @category DateTime
+ *
  * @since 16.01.2021. 18:08
  */
 public void formatDate() {

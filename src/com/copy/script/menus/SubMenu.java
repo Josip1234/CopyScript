@@ -10,7 +10,7 @@ import com.copy.script.messages.OneWordMessages;
 /**
  * 
  * @author Korisnik
- * @category Menu
+ * 
  * @version 1.0
  * @since 31.12.2020. 13:18
  */

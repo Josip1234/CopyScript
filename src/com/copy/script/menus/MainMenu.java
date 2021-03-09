@@ -7,7 +7,7 @@ import com.copy.script.messages.Message;
 /**
  * 
  * @author Korisnik
- * @category Menu
+ * 
  * @version 1.0
  * @since 2.1.2021. 12:42
  *

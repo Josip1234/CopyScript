@@ -2,7 +2,7 @@ package com.copy.script.folders;
 /***
  * 
  * @author Korisnik
- * @category Folders
+ * 
  * @version 1.0
  * @since 30.12.2020. 10:07
  */

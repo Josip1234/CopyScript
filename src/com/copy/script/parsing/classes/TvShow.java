@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Class for parsing json tv show data or generating input tada, fake or real ones
  * @author Korisnik
- * @category ParsingClass
+ * 
  * @version 2.0
  * @since 10.01.2021. 08:46
  */
@@ -20,7 +20,7 @@ public class TvShow {
 	
 	/**
 	 * @author Korisnik
-	 * @category Constructor
+	 * 
 	 * @since 10.01.2021. 08:54
 	 * @param id - id of the file in folder
 	 * @param showName - name of the show or simply name of the file

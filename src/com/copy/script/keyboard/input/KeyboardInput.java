@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 
  * @author Korisnik
- * @category Input
+ * 
  * @version 1.0
  * @since 28.12.2020. 14:08
  * 

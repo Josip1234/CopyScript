@@ -2,7 +2,7 @@ package com.copy.script.files;
 /***
  * 
  * @author Korisnik
- * @category Files
+ * 
  * @since 1.1.2021. 14:12
  * @version 1.0
  *

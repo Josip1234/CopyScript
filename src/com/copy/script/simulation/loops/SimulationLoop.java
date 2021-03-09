@@ -5,7 +5,7 @@ import com.copy.script.messages.Message;
 /**
  * Class for simulation
  * @author Korisnik
- * @category SimulationLoops
+ * 
  * @version 1.0
  * @since 28.12.2020. 13:32
  */
@@ -13,7 +13,7 @@ public class SimulationLoop {
 	/**
 	 * Simulate opening application
 	 * @author Korisnik
-	 * @category Functions
+	 * 
 	 * @since 28.12.2020. 13:36
 	 * @param numberOfTimeLoop
 	 */

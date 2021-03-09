@@ -8,7 +8,7 @@ import com.copy.script.messages.Message;
 /***
  * 
  * @author Korisnik
- * @category Files
+ * 
  * @since 1.1.2021. 14:14
  * @version 1.0
  *

@@ -5,7 +5,7 @@ import com.copy.script.activation.main.functions.Function;
 /**
  * 
  * @author Korisnik
- * @category MainCMDApp
+ * 
  * @version 1.0
  * @since 28.12.2020. 13:46
  */

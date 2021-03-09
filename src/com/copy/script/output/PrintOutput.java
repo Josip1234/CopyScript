@@ -12,7 +12,7 @@ import com.copy.script.parsing.classes.TvShow;
 /**
  * Class for printing input from user
  * @author Korisnik
- * @category Output
+ * 
  * @version 1.0
  * @since 29.12.2020. 11:51
  *
