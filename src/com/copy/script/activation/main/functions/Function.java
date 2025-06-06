@@ -43,6 +43,18 @@ public void activateLanguageMenu() {
 	System.out.println(Message.closingLanguageMenu+Message.with+Message.spacing+chosenLaguage);
 }
 
+/***
+ * @author Korisnik
+ * @since 06.06.2025. 23:52
+ * Function similiar as activate language menu just as swing window elements
+ * @return
+ */
+public String activateLanguageMenuNoSimpulation() {
+
+return "";
+}
+
+
 /**
  * Set new source and destination folders.
  * @author Korisnik
